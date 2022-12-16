@@ -68,16 +68,32 @@ class PollingVolunteer extends ApiController
             $user->save();
             DB::commit();
 
+//            if($person){
+//
+//                $newPollingVolunteer = Person::select('people.person_name','people.age', 'people.gender',
+//                    'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark',
+//                    'users.email','polling_stations.polling_number')
+//                    ->join('users','users.person_id','people.id')
+//                    ->join('polling_stations','people.polling_station_id','polling_stations.id')
+//                    ->where('people.id',$person->id)->first();
+//
+//                return response()->json(['success'=>$person,'exception'=>$newPollingVolunteer], 200);
+//            }
+
+
         }catch(\Exception $e){
             DB::rollBack();
             return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
         }
+//        return $person;
+
         $newPollingVolunteer = Person::select('people.person_name','people.age', 'people.gender',
             'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark',
             'users.email','polling_stations.polling_number')
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
+//        return response()->json(['success'=>'person','exception'=>$person], 500);
         return $this->successResponse(new PollingVolunteerResource($newPollingVolunteer),'User added successfully');
     }
 }

@@ -6,16 +6,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class PollingVolunteerResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
     public function toArray($request)
     {
         return [
-            "id" => $this->id,
+            'id' => $this->id,
             "personId" => $this->person_id,
             "parentId" => $this->parent_id,
             "memberCode" => $this->member_code,

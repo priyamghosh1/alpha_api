@@ -158,6 +158,21 @@ where polling_stations.assembly_constituency_id = $assemblyId and people.person_
             $person->mobile2= $request->input('mobile2');
             $person->voter_id= $request->input('voterId');
             $person->polling_station_id= $request->input('pollingStationId');
+
+            $person->guardian_name= $request->input('guardianName');
+            $person->religion= $request->input('religion');
+            $person->occupation= $request->input('occupation');
+            $person->police_station= $request->input('policeStation');
+            $person->cast= $request->input('cast');
+            $person->part_no= $request->input('partNo');
+            $person->post_office= $request->input('postOffice');
+            $person->house_no= $request->input('houseNo');
+            $person->district= $request->input('district');
+            $person->pin_code= $request->input('pinCode');
+            $person->satisfied_by_present_gov= $request->input('satisfiedByPresentGov');
+            $person->previous_voting_history= $request->input('previousVotingHistory');
+            $person->preferable_candidate= $request->input('preferableCandidate');
+            $person->suggestion= $request->input('suggestion');
             $person->save();
 
             $user = new User();
