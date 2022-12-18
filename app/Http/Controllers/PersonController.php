@@ -95,18 +95,18 @@ class PersonController extends ApiController
     public function showPersonByAssembly($assemblyId)
     {
         $people = DB::Select(DB::raw("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
-parent_person.person_name as parent_name, users.remark, users.email,
-person_types.person_type_name, people.age, people.gender,
-people.mobile1, people.mobile2, people.voter_id,
-assemblies.assembly_name, polling_stations.polling_number from users
+            parent_person.person_name as parent_name, users.remark, users.email,
+            person_types.person_type_name, people.age, people.gender,
+            people.mobile1, people.mobile2, people.voter_id,people.police_station,
+            assemblies.assembly_name, polling_stations.polling_number,people.guardian_name,people.religion,people.occupation from users
 
-inner join people ON people.id = users.person_id
-left join users as parent_user on parent_user.id = users.parent_id
-left join people as parent_person on  parent_user.id=parent_person.id
-inner join person_types ON person_types.id = people.person_type_id
-left join assemblies ON assemblies.id = people.assembly_constituency_id
-left join polling_stations ON polling_stations.id = people.polling_station_id
-where polling_stations.assembly_constituency_id = $assemblyId and people.person_type_id=3"));
+            inner join people ON people.id = users.person_id
+            left join users as parent_user on parent_user.id = users.parent_id
+            left join people as parent_person on  parent_user.id=parent_person.id
+            inner join person_types ON person_types.id = people.person_type_id
+            left join assemblies ON assemblies.id = people.assembly_constituency_id
+            left join polling_stations ON polling_stations.id = people.polling_station_id
+            where polling_stations.assembly_constituency_id = $assemblyId and people.person_type_id=3"));
 
         return $this->successResponse(PollingMemberResource::collection($people));
     }
@@ -190,7 +190,7 @@ where polling_stations.assembly_constituency_id = $assemblyId and people.person_
         }
         $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender',
             'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark',
-            'users.email','polling_stations.polling_number')
+            'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station')
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();

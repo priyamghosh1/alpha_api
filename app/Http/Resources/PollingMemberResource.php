@@ -24,12 +24,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
  */
 class PollingMemberResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
     public function toArray($request)
     {
         return [
@@ -42,6 +36,8 @@ class PollingMemberResource extends JsonResource
 			"remark" => $this->remark,
 			"email" => $this->email,
 			"personTypeName" => $this->person_type_name,
+			"guardianName" => $this->guardian_name,
+			"religion" => $this->religion,
 			"age" => $this->age,
 			"gender" => $this->gender,
 			"mobile1" => $this->mobile1,
