@@ -37,6 +37,8 @@ class PollingMemberResource extends JsonResource
 			"email" => $this->email,
 			"personTypeName" => $this->person_type_name,
 			"guardianName" => $this->guardian_name,
+			"occupation" => $this->occupation,
+			"police_station" => $this->police_station,
 			"religion" => $this->religion,
 			"age" => $this->age,
 			"gender" => $this->gender,
