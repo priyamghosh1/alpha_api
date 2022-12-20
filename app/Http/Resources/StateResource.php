@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Models\DistrictList;
 
 /**
  * @property mixed state_name
@@ -24,7 +25,8 @@ class StateResource extends JsonResource
             "id"=>$this->id,
 			"name"=>$this->state_name,
 			"state_code"=>$this->state_code,
-            "districts" =>DistrictSpecialResource::collection($this->districts)
+            // "districts" =>DistrictSpecialResource::collection($this->districts)
+            "districts" =>DistrictSpecialResource::collection(DistrictList::whereStateId($this->id)->get())
         ];
     }
 }

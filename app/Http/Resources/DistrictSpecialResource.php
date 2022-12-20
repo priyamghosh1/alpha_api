@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Models\Assembly;
+
 
 class DistrictSpecialResource extends JsonResource
 {
@@ -17,7 +19,7 @@ class DistrictSpecialResource extends JsonResource
         return [
             'districtId' => $this->id,
             'name' => $this->district_name,
-            'assemblies' => AssemblySpecialResource::collection($this->assemblies)
+            'assemblies' => AssemblySpecialResource::collection(Assembly::whereDistrictId($this->id)->get())
         ];
     }
 }

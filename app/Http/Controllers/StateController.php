@@ -16,6 +16,7 @@ class StateController extends ApiController
     public function index()
     {
         $states = State::whereId(17)->orderBy('id')->get();
+        // return $states;
         return $this->successResponse(StateResource::collection($states));
     }
 

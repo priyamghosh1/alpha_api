@@ -103,10 +103,10 @@ Route::group(array('prefix' => 'dev'), function() {
         Route::get("/admin/dashboard/{assemblyId}", [AssemblyAdminDashboard::class, 'get_report']);
 
     });
-    Route::group(array('prefix' => 'states'), function() {
+    // Route::group(array('prefix' => 'states'), function() {
 
-        Route::get("/", [StateController::class, 'index']);
-    });
+    //     Route::get("/", [StateController::class, 'index']);
+    // });
 
     Route::group(array('prefix' => 'pollingStations'), function() {
 
