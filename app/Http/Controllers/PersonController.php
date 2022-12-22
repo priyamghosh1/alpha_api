@@ -95,9 +95,9 @@ class PersonController extends ApiController
     public function showPersonByAssembly($assemblyId)
     {
         $people = DB::Select(DB::raw("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
-            parent_person.person_name as parent_name, users.remark, users.email,
-            person_types.person_type_name, people.age, people.gender,
-            people.mobile1, people.mobile2, people.voter_id,people.police_station,
+            parent_person.person_name as parent_name, users.remark, users.email,people.part_no,people.preferable_candidate,people.road_name,
+            person_types.person_type_name, people.age, people.gender,people.cast,people.post_office,people.suggestion,people.aadhar_id,
+            people.mobile1, people.mobile2, people.voter_id,people.police_station,people.house_no,people.pin_code,people.previous_voting_history,people.satisfied_by_present_gov,
             assemblies.assembly_name, polling_stations.polling_number,people.guardian_name,people.religion,people.occupation from users
 
             inner join people ON people.id = users.person_id
@@ -188,9 +188,10 @@ class PersonController extends ApiController
             DB::rollBack();
             return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
         }
-        $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender',
-            'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark',
-            'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station')
+        $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender','people.part_no','people.house_no','people.road_name',
+            'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark','people.cast','people.post_office','people.pin_code',
+            'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station','people.preferable_candidate',
+            'people.suggestion','people.previous_voting_history','people.satisfied_by_present_gov','people.aadhar_id')
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();

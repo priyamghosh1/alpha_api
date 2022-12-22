@@ -38,15 +38,26 @@ class PollingMemberResource extends JsonResource
 			"personTypeName" => $this->person_type_name,
 			"guardianName" => $this->guardian_name,
 			"occupation" => $this->occupation,
-			"police_station" => $this->police_station,
+			"preferableCandidate" => $this->preferable_candidate,
+			"suggestion" => $this->suggestion,
+			"satisfiedByPresentGov" => $this->satisfied_by_present_gov,
+			"previousVotingHistory" => $this->previous_voting_history,
+			"policeStation" => $this->police_station,
+			"postOffice" => $this->post_office,
+			"houseNo" => $this->house_no,
+			"pinCode" => $this->pin_code,
 			"religion" => $this->religion,
+			"partNo" => $this->part_no,
+			"cast" => $this->cast,
 			"age" => $this->age,
 			"gender" => $this->gender,
 			"mobile1" => $this->mobile1,
 			"mobile2" => $this->mobile2,
 			"voterId" => $this->voter_id,
 			"assemblyName" => $this->assembly_name,
-			"pollingNumber" => $this->polling_number
+			"pollingNumber" => $this->polling_number,
+			"roadName" => $this->road_name,
+			"aadharId" => $this->aadhar_id
         ];
     }
 }
