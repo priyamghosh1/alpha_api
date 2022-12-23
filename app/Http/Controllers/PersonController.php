@@ -158,6 +158,8 @@ class PersonController extends ApiController
             $person->mobile2= $request->input('mobile2');
             $person->voter_id= $request->input('voterId');
             $person->polling_station_id= $request->input('pollingStationId');
+            $person->aadhar_id= $request->input('aadharId');
+            $person->road_name= $request->input('roadName');
 
             $person->guardian_name= $request->input('guardianName');
             $person->religion= $request->input('religion');
