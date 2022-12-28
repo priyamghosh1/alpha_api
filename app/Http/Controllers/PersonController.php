@@ -113,6 +113,8 @@ class PersonController extends ApiController
 
     public function createPollingAgent(Request $request)
     {
+        return response()->json(['success'=>$request,'data' => $request['masterData']], 500);
+
         DB::beginTransaction();
 
         try{
