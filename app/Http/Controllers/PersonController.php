@@ -6,6 +6,7 @@ use App\Models\Person;
 use App\Models\CustomVoucher;
 use App\Models\PollingStation;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
@@ -113,7 +114,7 @@ class PersonController extends ApiController
 
     public function createPollingAgent(Request $request)
     {
-        return response()->json(['success'=>$request,'data' => $request['masterData']], 500);
+//        return response()->json(['success'=>$request,'data' => $request['masterData']], 500);
 
         DB::beginTransaction();
 
@@ -149,43 +150,84 @@ class PersonController extends ApiController
             $emailId = 'agent'.$customVoucher->last_counter;
             // if any record is failed then whole entry will be rolled back
             //try portion execute the commands and catch execute when error.
+//            $person= new Person();
+//            $person->member_code = $member_code;
+//            $person->person_type_id = $request->input('personTypeId');
+//            $person->person_name = $request->input('personName');
+//            $person->age = $request->input('age');
+//            $person->gender = $request->input('gender');
+//            $person->email= $emailId;
+//            $person->mobile1= $request->input('mobile1');
+//            $person->mobile2= $request->input('mobile2');
+//            $person->voter_id= $request->input('voterId');
+//            $person->polling_station_id= $request->input('pollingStationId');
+//            $person->aadhar_id= $request->input('aadharId');
+//            $person->road_name= $request->input('roadName');
+//
+//            $person->guardian_name= $request->input('guardianName');
+//            $person->religion= $request->input('religion');
+//            $person->occupation= $request->input('occupation');
+//            $person->police_station= $request->input('policeStation');
+//            $person->cast= $request->input('cast');
+//            $person->part_no= $request->input('partNo');
+//            $person->post_office= $request->input('postOffice');
+//            $person->house_no= $request->input('houseNo');
+//            $person->district= $request->input('district');
+//            $person->pin_code= $request->input('pinCode');
+//            $person->satisfied_by_present_gov= $request->input('satisfiedByPresentGov');
+//            $person->previous_voting_history= $request->input('previousVotingHistory');
+//            $person->preferable_candidate= $request->input('preferableCandidate');
+//            $person->suggestion= $request->input('suggestion');
+//            $person->save();
+
             $person= new Person();
             $person->member_code = $member_code;
-            $person->person_type_id = $request->input('personTypeId');
-            $person->person_name = $request->input('personName');
-            $person->age = $request->input('age');
-            $person->gender = $request->input('gender');
+            $person->person_type_id = $request['personTypeId'];
+            $person->person_name = $request['personName'];
+            $person->age = $request['age'];
+            $person->gender = $request['gender'];
             $person->email= $emailId;
-            $person->mobile1= $request->input('mobile1');
-            $person->mobile2= $request->input('mobile2');
-            $person->voter_id= $request->input('voterId');
-            $person->polling_station_id= $request->input('pollingStationId');
-            $person->aadhar_id= $request->input('aadharId');
-            $person->road_name= $request->input('roadName');
+            $person->mobile1= $request['mobile1'];
+            $person->mobile2= $request['mobile2'];
+            $person->voter_id= $request['voterId'];
+            $person->polling_station_id= $request['pollingStationId'];
+            $person->aadhar_id= $request['aadharId'];
+            $person->road_name= $request['roadName'];
 
-            $person->guardian_name= $request->input('guardianName');
-            $person->religion= $request->input('religion');
-            $person->occupation= $request->input('occupation');
-            $person->police_station= $request->input('policeStation');
-            $person->cast= $request->input('cast');
-            $person->part_no= $request->input('partNo');
-            $person->post_office= $request->input('postOffice');
-            $person->house_no= $request->input('houseNo');
-            $person->district= $request->input('district');
-            $person->pin_code= $request->input('pinCode');
-            $person->satisfied_by_present_gov= $request->input('satisfiedByPresentGov');
-            $person->previous_voting_history= $request->input('previousVotingHistory');
-            $person->preferable_candidate= $request->input('preferableCandidate');
-            $person->suggestion= $request->input('suggestion');
+            $person->guardian_name= $request['guardianName'];
+            $person->religion= $request['religion'];
+            $person->occupation= $request['occupation'];
+            $person->police_station= $request['policeStation'];
+            $person->cast= $request['cast'];
+            $person->part_no= $request['partNo'];
+            $person->post_office= $request['postOffice'];
+            $person->house_no= $request['houseNo'];
+            $person->district= $request['district'];
+            $person->pin_code= $request['pinCode'];
+            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'];
+            $person->previous_voting_history= $request['previousVotingHistory'];
+            $person->preferable_candidate= $request['preferableCandidate'];
+            $person->suggestion= $request['suggestion'];
             $person->save();
 
             $user = new User();
             $user->person_id = $person->id;
-            $user->parent_id = $request->input('parentId');
-            $user->remark = $request->input('remark');
+            $user->parent_id = $request['parentId'];
+            $user->remark = $request['remark'];
             $user->email = $emailId;
-            $user->password = $request->input('password');
+            $user->password = $request['password'];
             $user->save();
+
+            $fileName = $person->id.'.jpg';
+            $path = $request->file('file')->move(public_path("/profile_pic"), $fileName);
+
+//            $user = new User();
+//            $user->person_id = $person->id;
+//            $user->parent_id = $request->input('parentId');
+//            $user->remark = $request->input('remark');
+//            $user->email = $emailId;
+//            $user->password = $request->input('password');
+//            $user->save();
             DB::commit();
 
         }catch(\Exception $e){
