@@ -31,7 +31,8 @@ class CreatePeopleTable extends Migration
             $table->string('post_office',50)->nullable(true);
             $table->string('house_no',50)->nullable(true);
             $table->string('road_name',50)->nullable(true);
-            $table->string('district',50)->nullable(true);
+//            $table->string('district',50)->nullable(true);
+            $table->foreignId('district_id')->nullable(true)->references('id')->on('district_lists')->onDelete('cascade');
             $table->string('pin_code',50)->nullable(true);
             $table->enum('satisfied_by_present_gov',['yes','no'])->default('yes');
             $table->enum('previous_voting_history',['yes','no'])->default('no');

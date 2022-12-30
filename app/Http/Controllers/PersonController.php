@@ -99,7 +99,7 @@ class PersonController extends ApiController
             parent_person.person_name as parent_name, users.remark, users.email,people.part_no,people.preferable_candidate,people.road_name,
             person_types.person_type_name, people.age, people.gender,people.cast,people.post_office,people.suggestion,people.aadhar_id,
             people.mobile1, people.mobile2, people.voter_id,people.police_station,people.house_no,people.pin_code,people.previous_voting_history,people.satisfied_by_present_gov,
-            assemblies.assembly_name, polling_stations.polling_number,people.guardian_name,people.religion,people.occupation from users
+            assemblies.assembly_name, polling_stations.polling_number,people.guardian_name,people.religion,people.occupation,people.district_id from users
 
             inner join people ON people.id = users.person_id
             left join users as parent_user on parent_user.id = users.parent_id
@@ -114,7 +114,7 @@ class PersonController extends ApiController
 
     public function createPollingAgent(Request $request)
     {
-//        return response()->json(['success'=>$request,'data' => $request['masterData']], 500);
+//        return response()->json(['success'=>$request,'data' => $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov']], 500);
 
         DB::beginTransaction();
 
@@ -202,10 +202,11 @@ class PersonController extends ApiController
             $person->part_no= $request['partNo'];
             $person->post_office= $request['postOffice'];
             $person->house_no= $request['houseNo'];
-            $person->district= $request['district'];
+            $person->district_id= $request['district'];
             $person->pin_code= $request['pinCode'];
-            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'];
-            $person->previous_voting_history= $request['previousVotingHistory'];
+            $person->state_id = $request['state'];
+            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
+            $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
             $person->preferable_candidate= $request['preferableCandidate'];
             $person->suggestion= $request['suggestion'];
             $person->save();
@@ -237,7 +238,7 @@ class PersonController extends ApiController
         $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender','people.part_no','people.house_no','people.road_name',
             'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark','people.cast','people.post_office','people.pin_code',
             'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station','people.preferable_candidate',
-            'people.suggestion','people.previous_voting_history','people.satisfied_by_present_gov','people.aadhar_id')
+            'people.suggestion','people.previous_voting_history','people.satisfied_by_present_gov','people.aadhar_id','people.district_id')
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();

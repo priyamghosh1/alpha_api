@@ -91,6 +91,7 @@ class PollingMemberResource extends JsonResource
             "houseNo" => $this->house_no,
             "pinCode" => $this->pin_code,
             "religion" => $this->religion,
+            "districtId" => $this->district_id,
             "partNo" => $this->part_no,
             "cast" => $this->cast,
             "age" => $this->age,
