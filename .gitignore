@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/voter_pic
 /storage/*.key
 /vendor
 .env
