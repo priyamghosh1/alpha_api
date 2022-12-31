@@ -83,6 +83,7 @@ class PollingMemberResource extends JsonResource
             "guardianName" => $this->guardian_name,
             "occupation" => $this->occupation,
             "preferableCandidate" => $this->preferable_candidate,
+            "pollingStationId" => $this->polling_station_id,
             "suggestion" => $this->suggestion,
             "satisfiedByPresentGov" => $this->satisfied_by_present_gov,
             "previousVotingHistory" => $this->previous_voting_history,
