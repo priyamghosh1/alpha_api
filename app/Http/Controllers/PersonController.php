@@ -8,6 +8,7 @@ use App\Models\PollingStation;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Resources\PollingMemberResource;
@@ -204,7 +205,8 @@ class PersonController extends ApiController
             $person->house_no= $request['houseNo'];
             $person->district_id= $request['district'];
             $person->pin_code= $request['pinCode'];
-            $person->state_id = $request['state'];
+//            $person->state_id = $request['state'];
+            $person->state_id = 17;
             $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
             $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
             $person->preferable_candidate= $request['preferableCandidate'];
@@ -244,4 +246,43 @@ class PersonController extends ApiController
             ->where('people.id',$person->id)->first();
         return $this->successResponse(new PollingMemberResource($newPollingMember),'User added successfully');
     }
+
+    public function updatePollingAgent(Request $request)
+    {
+        $person= Person::find($request->input('personId'));
+        $person->person_name = $request->input('personName');
+        $person->age = $request->input('age');
+        $person->gender = $request->input('gender');
+        $person->mobile1= $request->input('mobile1');
+        $person->mobile2= $request->input('mobile2');
+        $person->voter_id= $request->input('voterId');
+        $person->polling_station_id= $request->input('pollingStationId');
+        $person->aadhar_id= $request->input('aadharId');
+        $person->road_name= $request->input('roadName');
+
+        $person->guardian_name= $request->input('guardianName');
+        $person->religion= $request->input('religion');
+        $person->occupation= $request->input('occupation');
+        $person->police_station= $request->input('policeStation');
+        $person->cast= $request->input('cast');
+        $person->part_no= $request->input('partNo');
+        $person->post_office= $request->input('postOffice');
+        $person->house_no= $request->input('houseNo');
+        $person->district_id= $request->input('district');
+        $person->pin_code= $request->input('pinCode');
+        $person->satisfied_by_present_gov= $request->input('satisfiedByPresentGov');
+        $person->previous_voting_history= $request->input('previousVotingHistory');
+        $person->preferable_candidate= $request->input('preferableCandidate');
+        $person->suggestion= $request->input('suggestion');
+        $person->update();
+        $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender','people.part_no','people.house_no','people.road_name',
+            'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark','people.cast','people.post_office','people.pin_code',
+            'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station','people.preferable_candidate',
+            'people.suggestion','people.previous_voting_history','people.satisfied_by_present_gov','people.aadhar_id','people.district_id','people.polling_station_id')
+            ->join('users','users.person_id','people.id')
+            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            ->where('people.id',$request->input('personId'))->first();
+        return $this->successResponse(new PollingMemberResource($newPollingMember),'User added successfully');
+    }
+
 }

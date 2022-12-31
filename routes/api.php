@@ -61,6 +61,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::group(array('prefix' => 'pollingAgent'), function() {
 
         Route::post("/", [PersonController::class, 'createPollingAgent']);
+        Route::put("/", [PersonController::class, 'updatePollingAgent']);
     });
 
     Route::group(array('prefix' => 'legislative'), function() {
