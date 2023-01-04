@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::post('uploadPicture',[UserController::class,'uploadPicture']);
     Route::get("getAllArea",[AreaController::class, 'get_area']);
 
+
     Route::group(array('prefix' => 'person'), function() {
 
         Route::get("/assembly/{id}", [PersonController::class, 'showPersonByAssembly']);
@@ -70,8 +71,8 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::post("/", [LegislativeController::class, 'storeVolunteer']);
     });
     Route::group(array('prefix' => 'volunteer'), function() {
-
-        Route::post("/", [PollingVolunteer::class, 'storePollingStationGeneralMember']);
+        Route::post("/", [PersonController::class, 'createVolunteerByPollingAgent']);
+//        Route::post("/", [PollingVolunteer::class, 'storePollingStationGeneralMember']);
         Route::get("/{volunteerId}/workers", [VolunteerController::class, 'fetchGeneralWorkersByVolunteerId']);
     });
 

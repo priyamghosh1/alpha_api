@@ -95,7 +95,9 @@ class DatabaseSeeder extends Seeder
         Person::create(['person_type_id' => 2,'person_name' => 'Raliang', 'email' => '23@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>23]);
         Person::create(['person_type_id' => 2,'person_name' => 'Mowkaiaw', 'email' => '24@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>24]);
         Person::create(['person_type_id' => 2,'person_name' => 'Sutnga', 'email' => '25@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>25]);
-        Person::create(['person_type_id' => 2,'person_name' => 'Nartiang', 'email' => '26@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>26]);
+
+        Person::create(['person_type_id' => 7,'person_name' => 'Nartiang', 'email' => '26@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','district_id'=>4,'polling_station_id' => 2,'assembly_constituency_id'=>26]);
+
         Person::create(['person_type_id' => 2,'person_name' => 'Jowai', 'email' => '27@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>27]);
         Person::create(['person_type_id' => 2,'person_name' => 'Raliang', 'email' => '28@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>28]);
         Person::create(['person_type_id' => 2,'person_name' => 'Mowkaiaw', 'email' => '29@gmail.com', 'mobile1' => '99025888252', 'aadhar_id' =>'4578988' , 'voter_id' => '1236547','assembly_constituency_id'=>29]);
