@@ -29,38 +29,34 @@ class DatabaseSeeder extends Seeder
         $this->call(DistrictListSeeder::class);
         $this->call(AssemblySeeder::class);
         $this->call(PollingStationSeeder::class);
+        $this->call(PersonTypeSeeder::class);
+        $this->call(AreaSeeder::class);
+        $this->call(PartSeeder::class);
 
         // \App\Models\User::factory(10)->create();
         //person_types table data
-        PersonType::create(['person_type_name' => 'Developer']);                #1
-        PersonType::create(['person_type_name' => 'Admin']);                    #2
-        PersonType::create(['person_type_name' => 'Legislative candidate']);    #3
-        PersonType::create(['person_type_name' => 'Legend']);                   #4
-        PersonType::create(['person_type_name' => 'District Admin']);           #5
-        PersonType::create(['person_type_name' => 'Assembly constituency']);    #6
-        PersonType::create(['person_type_name' => 'Polling station Volunteer']); #7
-        PersonType::create(['person_type_name' => 'Booth Volunteer']);           #8
-        PersonType::create(['person_type_name' => 'Volunteer']);                 #9
-        PersonType::create(['person_type_name' => 'General members']);          #10
+//        PersonType::create(['person_type_name' => 'Developer']);                #1
+//        PersonType::create(['person_type_name' => 'Admin']);                    #2
+//        PersonType::create(['person_type_name' => 'Legislative candidate']);    #3
+//        PersonType::create(['person_type_name' => 'Legend']);                   #4
+//        PersonType::create(['person_type_name' => 'District Admin']);           #5
+//        PersonType::create(['person_type_name' => 'Assembly constituency']);    #6
+//        PersonType::create(['person_type_name' => 'Polling station Volunteer']); #7
+//        PersonType::create(['person_type_name' => 'Booth Volunteer']);           #8
+//        PersonType::create(['person_type_name' => 'Volunteer']);                 #9
+//        PersonType::create(['person_type_name' => 'General members']);          #10
 
 
-        $this->command->info('All User types are added');
+//        $this->command->info('All User types are added');
 
-        Area::create(['area_name' => 'area_1']);
-        Area::create(['area_name' => 'area_2']);
-        Area::create(['area_name' => 'area_3']);
-        Area::create(['area_name' => 'area_4']);
-        Area::create(['area_name' => 'area_5']);
+//        Area::create(['area_name' => 'area_1']);
+//        Area::create(['area_name' => 'area_2']);
+//        Area::create(['area_name' => 'area_3']);
+//        Area::create(['area_name' => 'area_4']);
+//        Area::create(['area_name' => 'area_5']);
 
 
         //storing state
-
-
-
-
-
-
-
 
 
         Person::create(['person_type_id' => 2,'person_name' => 'Super admin', 'email' => 'super@gmail.com', 'mobile1' => '', 'aadhar_id' =>'' , 'voter_id' => '']);
