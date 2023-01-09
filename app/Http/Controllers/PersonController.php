@@ -396,7 +396,7 @@ class PersonController extends ApiController
             inner join person_types ON person_types.id = people.person_type_id
             left join assemblies ON assemblies.id = people.assembly_constituency_id
             left join polling_stations ON polling_stations.id = people.polling_station_id
-            where people.person_type_id=9 and users.parent_id = $id");
+            where people.person_type_id=7 and users.parent_id = $id");
 
         return $this->successResponse(PollingVolunteerResource::collection($people));
     }
@@ -413,7 +413,7 @@ class PersonController extends ApiController
             inner join person_types ON person_types.id = people.person_type_id
             left join assemblies ON assemblies.id = people.assembly_constituency_id
             left join polling_stations ON polling_stations.id = people.polling_station_id
-            where people.person_type_id=9 and users.parent_id = $id");
+            where people.person_type_id=8 and users.parent_id = $id");
 
         return $this->successResponse(BoothVolunteerResource::collection($people));
     }
