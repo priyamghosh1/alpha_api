@@ -255,7 +255,7 @@ class PersonController extends ApiController
             DB::rollBack();
             return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
         }
-        $newPollingMember = Person::select('people.member_code','people.age', 'people.gender',
+        $newPollingMember = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
             'users.id','users.person_id','users.remark','people.cast',
             'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
