@@ -1153,6 +1153,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>58,'polling_station_name' =>NULL]); #958
         PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>59,'polling_station_name' =>NULL]); #959
         PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>60,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>61,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>62,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>63,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>64,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>65,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>66,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>67,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>68,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>69,'polling_station_name' =>NULL]); #960
+        PollingStation::create(['assembly_constituency_id' =>16,'polling_number' =>70,'polling_station_name' =>NULL]); #960
+
+
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>1,'polling_station_name' =>NULL]); #961
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>2,'polling_station_name' =>NULL]); #962
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>3,'polling_station_name' =>NULL]); #963
@@ -1213,6 +1225,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>58,'polling_station_name' =>NULL]); #1018
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>59,'polling_station_name' =>NULL]); #1019
         PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>60,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>61,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>62,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>63,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>64,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>65,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>66,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>67,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>68,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>69,'polling_station_name' =>NULL]); #1020
+        PollingStation::create(['assembly_constituency_id' =>17,'polling_number' =>70,'polling_station_name' =>NULL]); #1020
+
+
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>1,'polling_station_name' =>NULL]); #1021
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>2,'polling_station_name' =>NULL]); #1022
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>3,'polling_station_name' =>NULL]); #1023
@@ -1273,6 +1297,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>58,'polling_station_name' =>NULL]); #1078
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>59,'polling_station_name' =>NULL]); #1079
         PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>60,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>61,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>62,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>63,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>64,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>65,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>66,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>67,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>68,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>69,'polling_station_name' =>NULL]); #1080
+        PollingStation::create(['assembly_constituency_id' =>18,'polling_number' =>70,'polling_station_name' =>NULL]); #1080
+
+
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>1,'polling_station_name' =>NULL]); #1081
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>2,'polling_station_name' =>NULL]); #1082
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>3,'polling_station_name' =>NULL]); #1083
@@ -1333,6 +1369,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>58,'polling_station_name' =>NULL]); #1138
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>59,'polling_station_name' =>NULL]); #1139
         PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>60,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>61,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>62,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>63,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>64,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>65,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>66,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>67,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>68,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>69,'polling_station_name' =>NULL]); #1140
+        PollingStation::create(['assembly_constituency_id' =>19,'polling_number' =>70,'polling_station_name' =>NULL]); #1140
+
+
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>1,'polling_station_name' =>NULL]); #1141
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>2,'polling_station_name' =>NULL]); #1142
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>3,'polling_station_name' =>NULL]); #1143
@@ -1393,6 +1441,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>58,'polling_station_name' =>NULL]); #1198
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>59,'polling_station_name' =>NULL]); #1199
         PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>60,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>61,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>62,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>63,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>64,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>65,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>66,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>67,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>68,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>69,'polling_station_name' =>NULL]); #1200
+        PollingStation::create(['assembly_constituency_id' =>20,'polling_number' =>70,'polling_station_name' =>NULL]); #1200
+
+
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>1,'polling_station_name' =>NULL]); #1201
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>2,'polling_station_name' =>NULL]); #1202
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>3,'polling_station_name' =>NULL]); #1203
@@ -1453,6 +1513,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>58,'polling_station_name' =>NULL]); #1258
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>59,'polling_station_name' =>NULL]); #1259
         PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>60,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>61,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>62,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>63,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>64,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>65,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>66,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>67,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>68,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>69,'polling_station_name' =>NULL]); #1260
+        PollingStation::create(['assembly_constituency_id' =>21,'polling_number' =>70,'polling_station_name' =>NULL]); #1260
+
+
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>1,'polling_station_name' =>NULL]); #1261
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>2,'polling_station_name' =>NULL]); #1262
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>3,'polling_station_name' =>NULL]); #1263
@@ -1513,6 +1585,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>58,'polling_station_name' =>NULL]); #1318
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>59,'polling_station_name' =>NULL]); #1319
         PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>60,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>61,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>62,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>63,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>64,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>65,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>66,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>67,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>68,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>69,'polling_station_name' =>NULL]); #1320
+        PollingStation::create(['assembly_constituency_id' =>22,'polling_number' =>70,'polling_station_name' =>NULL]); #1320
+
+
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>1,'polling_station_name' =>NULL]); #1321
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>2,'polling_station_name' =>NULL]); #1322
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>3,'polling_station_name' =>NULL]); #1323
@@ -1573,6 +1657,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>58,'polling_station_name' =>NULL]); #1378
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>59,'polling_station_name' =>NULL]); #1379
         PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>60,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>61,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>62,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>63,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>64,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>65,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>66,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>67,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>68,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>69,'polling_station_name' =>NULL]); #1380
+        PollingStation::create(['assembly_constituency_id' =>23,'polling_number' =>70,'polling_station_name' =>NULL]); #1380
+
+
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>1,'polling_station_name' =>NULL]); #1381
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>2,'polling_station_name' =>NULL]); #1382
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>3,'polling_station_name' =>NULL]); #1383
@@ -1633,6 +1729,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>58,'polling_station_name' =>NULL]); #1438
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>59,'polling_station_name' =>NULL]); #1439
         PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>60,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>61,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>62,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>63,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>64,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>65,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>66,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>67,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>68,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>69,'polling_station_name' =>NULL]); #1440
+        PollingStation::create(['assembly_constituency_id' =>24,'polling_number' =>70,'polling_station_name' =>NULL]); #1440
+
+
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>1,'polling_station_name' =>NULL]); #1441
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>2,'polling_station_name' =>NULL]); #1442
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>3,'polling_station_name' =>NULL]); #1443
@@ -1693,6 +1801,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>58,'polling_station_name' =>NULL]); #1498
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>59,'polling_station_name' =>NULL]); #1499
         PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>60,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>61,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>62,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>63,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>64,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>65,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>66,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>67,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>68,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>69,'polling_station_name' =>NULL]); #1500
+        PollingStation::create(['assembly_constituency_id' =>25,'polling_number' =>70,'polling_station_name' =>NULL]); #1500
+
+
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>1,'polling_station_name' =>NULL]); #1501
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>2,'polling_station_name' =>NULL]); #1502
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>3,'polling_station_name' =>NULL]); #1503
@@ -1753,6 +1873,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>58,'polling_station_name' =>NULL]); #1558
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>59,'polling_station_name' =>NULL]); #1559
         PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>60,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>61,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>62,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>63,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>64,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>65,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>66,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>67,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>68,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>69,'polling_station_name' =>NULL]); #1560
+        PollingStation::create(['assembly_constituency_id' =>26,'polling_number' =>70,'polling_station_name' =>NULL]); #1560
+
+
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>1,'polling_station_name' =>NULL]); #1561
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>2,'polling_station_name' =>NULL]); #1562
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>3,'polling_station_name' =>NULL]); #1563
@@ -1813,6 +1945,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>58,'polling_station_name' =>NULL]); #1618
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>59,'polling_station_name' =>NULL]); #1619
         PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>60,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>61,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>62,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>63,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>64,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>65,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>66,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>67,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>68,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>69,'polling_station_name' =>NULL]); #1620
+        PollingStation::create(['assembly_constituency_id' =>27,'polling_number' =>70,'polling_station_name' =>NULL]); #1620
+
+
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>1,'polling_station_name' =>NULL]); #1621
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>2,'polling_station_name' =>NULL]); #1622
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>3,'polling_station_name' =>NULL]); #1623
@@ -1873,6 +2017,90 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>58,'polling_station_name' =>NULL]); #1678
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>59,'polling_station_name' =>NULL]); #1679
         PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>60,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>61,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>62,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>63,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>64,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>65,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>66,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>67,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>68,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>69,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>28,'polling_number' =>70,'polling_station_name' =>NULL]); #1680
+
+
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>1,'polling_station_name' =>NULL]); #1621
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>2,'polling_station_name' =>NULL]); #1622
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>3,'polling_station_name' =>NULL]); #1623
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>4,'polling_station_name' =>NULL]); #1624
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>5,'polling_station_name' =>NULL]); #1625
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>6,'polling_station_name' =>NULL]); #1626
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>7,'polling_station_name' =>NULL]); #1627
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>8,'polling_station_name' =>NULL]); #1628
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>9,'polling_station_name' =>NULL]); #1629
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>10,'polling_station_name' =>NULL]); #1630
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>11,'polling_station_name' =>NULL]); #1631
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>12,'polling_station_name' =>NULL]); #1632
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>13,'polling_station_name' =>NULL]); #1633
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>14,'polling_station_name' =>NULL]); #1634
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>15,'polling_station_name' =>NULL]); #1635
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>16,'polling_station_name' =>NULL]); #1636
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>17,'polling_station_name' =>NULL]); #1637
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>18,'polling_station_name' =>NULL]); #1638
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>19,'polling_station_name' =>NULL]); #1639
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>20,'polling_station_name' =>NULL]); #1640
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>21,'polling_station_name' =>NULL]); #1641
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>22,'polling_station_name' =>NULL]); #1642
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>23,'polling_station_name' =>NULL]); #1643
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>24,'polling_station_name' =>NULL]); #1644
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>25,'polling_station_name' =>NULL]); #1645
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>26,'polling_station_name' =>NULL]); #1646
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>27,'polling_station_name' =>NULL]); #1647
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>28,'polling_station_name' =>NULL]); #1648
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>29,'polling_station_name' =>NULL]); #1649
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>30,'polling_station_name' =>NULL]); #1650
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>31,'polling_station_name' =>NULL]); #1651
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>32,'polling_station_name' =>NULL]); #1652
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>33,'polling_station_name' =>NULL]); #1653
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>34,'polling_station_name' =>NULL]); #1654
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>35,'polling_station_name' =>NULL]); #1655
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>36,'polling_station_name' =>NULL]); #1656
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>37,'polling_station_name' =>NULL]); #1657
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>38,'polling_station_name' =>NULL]); #1658
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>39,'polling_station_name' =>NULL]); #1659
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>40,'polling_station_name' =>NULL]); #1660
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>41,'polling_station_name' =>NULL]); #1661
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>42,'polling_station_name' =>NULL]); #1662
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>43,'polling_station_name' =>NULL]); #1663
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>44,'polling_station_name' =>NULL]); #1664
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>45,'polling_station_name' =>NULL]); #1665
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>46,'polling_station_name' =>NULL]); #1666
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>47,'polling_station_name' =>NULL]); #1667
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>48,'polling_station_name' =>NULL]); #1668
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>49,'polling_station_name' =>NULL]); #1669
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>50,'polling_station_name' =>NULL]); #1670
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>51,'polling_station_name' =>NULL]); #1671
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>52,'polling_station_name' =>NULL]); #1672
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>53,'polling_station_name' =>NULL]); #1673
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>54,'polling_station_name' =>NULL]); #1674
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>55,'polling_station_name' =>NULL]); #1675
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>56,'polling_station_name' =>NULL]); #1676
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>57,'polling_station_name' =>NULL]); #1677
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>58,'polling_station_name' =>NULL]); #1678
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>59,'polling_station_name' =>NULL]); #1679
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>60,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>61,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>62,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>63,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>64,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>65,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>66,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>67,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>68,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>69,'polling_station_name' =>NULL]); #1680
+        PollingStation::create(['assembly_constituency_id' =>29,'polling_number' =>70,'polling_station_name' =>NULL]); #1680
+
+
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>1,'polling_station_name' =>NULL]); #1681
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>2,'polling_station_name' =>NULL]); #1682
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>3,'polling_station_name' =>NULL]); #1683
@@ -1933,6 +2161,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>58,'polling_station_name' =>NULL]); #1738
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>59,'polling_station_name' =>NULL]); #1739
         PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>60,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>61,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>62,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>63,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>64,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>65,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>66,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>67,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>68,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>69,'polling_station_name' =>NULL]); #1740
+        PollingStation::create(['assembly_constituency_id' =>30,'polling_number' =>70,'polling_station_name' =>NULL]); #1740
+
+
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>1,'polling_station_name' =>NULL]); #1741
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>2,'polling_station_name' =>NULL]); #1742
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>3,'polling_station_name' =>NULL]); #1743
@@ -1993,6 +2233,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>58,'polling_station_name' =>NULL]); #1798
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>59,'polling_station_name' =>NULL]); #1799
         PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>60,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>61,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>62,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>63,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>64,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>65,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>66,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>67,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>68,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>69,'polling_station_name' =>NULL]); #1800
+        PollingStation::create(['assembly_constituency_id' =>31,'polling_number' =>70,'polling_station_name' =>NULL]); #1800
+
+
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>1,'polling_station_name' =>NULL]); #1801
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>2,'polling_station_name' =>NULL]); #1802
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>3,'polling_station_name' =>NULL]); #1803
@@ -2053,6 +2305,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>58,'polling_station_name' =>NULL]); #1858
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>59,'polling_station_name' =>NULL]); #1859
         PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>60,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>61,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>62,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>63,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>64,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>65,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>66,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>67,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>68,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>69,'polling_station_name' =>NULL]); #1860
+        PollingStation::create(['assembly_constituency_id' =>32,'polling_number' =>70,'polling_station_name' =>NULL]); #1860
+
+
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>1,'polling_station_name' =>NULL]); #1861
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>2,'polling_station_name' =>NULL]); #1862
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>3,'polling_station_name' =>NULL]); #1863
@@ -2113,6 +2377,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>58,'polling_station_name' =>NULL]); #1918
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>59,'polling_station_name' =>NULL]); #1919
         PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>60,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>61,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>62,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>63,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>64,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>65,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>66,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>67,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>68,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>69,'polling_station_name' =>NULL]); #1920
+        PollingStation::create(['assembly_constituency_id' =>33,'polling_number' =>70,'polling_station_name' =>NULL]); #1920
+
+
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>1,'polling_station_name' =>NULL]); #1921
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>2,'polling_station_name' =>NULL]); #1922
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>3,'polling_station_name' =>NULL]); #1923
@@ -2173,6 +2449,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>58,'polling_station_name' =>NULL]); #1978
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>59,'polling_station_name' =>NULL]); #1979
         PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>60,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>61,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>62,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>63,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>64,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>65,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>66,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>67,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>68,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>69,'polling_station_name' =>NULL]); #1980
+        PollingStation::create(['assembly_constituency_id' =>34,'polling_number' =>70,'polling_station_name' =>NULL]); #1980
+
+
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>1,'polling_station_name' =>NULL]); #1981
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>2,'polling_station_name' =>NULL]); #1982
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>3,'polling_station_name' =>NULL]); #1983
@@ -2233,6 +2521,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>58,'polling_station_name' =>NULL]); #2038
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>59,'polling_station_name' =>NULL]); #2039
         PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>60,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>61,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>62,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>63,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>64,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>65,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>66,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>67,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>68,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>69,'polling_station_name' =>NULL]); #2040
+        PollingStation::create(['assembly_constituency_id' =>35,'polling_number' =>70,'polling_station_name' =>NULL]); #2040
+
+
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>1,'polling_station_name' =>NULL]); #2041
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>2,'polling_station_name' =>NULL]); #2042
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>3,'polling_station_name' =>NULL]); #2043
@@ -2293,6 +2593,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>58,'polling_station_name' =>NULL]); #2098
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>59,'polling_station_name' =>NULL]); #2099
         PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>60,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>61,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>62,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>63,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>64,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>65,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>66,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>67,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>68,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>69,'polling_station_name' =>NULL]); #2100
+        PollingStation::create(['assembly_constituency_id' =>36,'polling_number' =>70,'polling_station_name' =>NULL]); #2100
+
+
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>1,'polling_station_name' =>NULL]); #2101
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>2,'polling_station_name' =>NULL]); #2102
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>3,'polling_station_name' =>NULL]); #2103
@@ -2353,6 +2665,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>58,'polling_station_name' =>NULL]); #2158
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>59,'polling_station_name' =>NULL]); #2159
         PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>60,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>61,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>62,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>63,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>64,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>65,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>66,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>67,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>68,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>69,'polling_station_name' =>NULL]); #2160
+        PollingStation::create(['assembly_constituency_id' =>37,'polling_number' =>70,'polling_station_name' =>NULL]); #2160
+
+
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>1,'polling_station_name' =>NULL]); #2161
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>2,'polling_station_name' =>NULL]); #2162
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>3,'polling_station_name' =>NULL]); #2163
@@ -2413,6 +2737,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>58,'polling_station_name' =>NULL]); #2218
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>59,'polling_station_name' =>NULL]); #2219
         PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>60,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>61,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>62,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>63,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>64,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>65,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>66,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>67,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>68,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>69,'polling_station_name' =>NULL]); #2220
+        PollingStation::create(['assembly_constituency_id' =>38,'polling_number' =>70,'polling_station_name' =>NULL]); #2220
+
+
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>1,'polling_station_name' =>NULL]); #2221
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>2,'polling_station_name' =>NULL]); #2222
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>3,'polling_station_name' =>NULL]); #2223
@@ -2473,6 +2809,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>58,'polling_station_name' =>NULL]); #2278
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>59,'polling_station_name' =>NULL]); #2279
         PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>60,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>61,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>62,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>63,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>64,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>65,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>66,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>67,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>68,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>69,'polling_station_name' =>NULL]); #2280
+        PollingStation::create(['assembly_constituency_id' =>39,'polling_number' =>70,'polling_station_name' =>NULL]); #2280
+
+
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>1,'polling_station_name' =>NULL]); #2281
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>2,'polling_station_name' =>NULL]); #2282
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>3,'polling_station_name' =>NULL]); #2283
@@ -2533,6 +2881,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>58,'polling_station_name' =>NULL]); #2338
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>59,'polling_station_name' =>NULL]); #2339
         PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>60,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>61,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>62,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>63,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>64,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>65,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>66,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>67,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>68,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>69,'polling_station_name' =>NULL]); #2340
+        PollingStation::create(['assembly_constituency_id' =>40,'polling_number' =>70,'polling_station_name' =>NULL]); #2340
+
+
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>1,'polling_station_name' =>NULL]); #2341
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>2,'polling_station_name' =>NULL]); #2342
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>3,'polling_station_name' =>NULL]); #2343
@@ -2593,6 +2953,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>58,'polling_station_name' =>NULL]); #2398
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>59,'polling_station_name' =>NULL]); #2399
         PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>60,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>61,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>62,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>63,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>64,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>65,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>66,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>67,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>68,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>69,'polling_station_name' =>NULL]); #2400
+        PollingStation::create(['assembly_constituency_id' =>41,'polling_number' =>70,'polling_station_name' =>NULL]); #2400
+
+
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>1,'polling_station_name' =>NULL]); #2401
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>2,'polling_station_name' =>NULL]); #2402
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>3,'polling_station_name' =>NULL]); #2403
@@ -2653,6 +3025,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>58,'polling_station_name' =>NULL]); #2458
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>59,'polling_station_name' =>NULL]); #2459
         PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>60,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>61,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>62,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>63,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>64,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>65,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>66,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>67,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>68,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>69,'polling_station_name' =>NULL]); #2460
+        PollingStation::create(['assembly_constituency_id' =>42,'polling_number' =>70,'polling_station_name' =>NULL]); #2460
+
+
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>1,'polling_station_name' =>NULL]); #2461
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>2,'polling_station_name' =>NULL]); #2462
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>3,'polling_station_name' =>NULL]); #2463
@@ -2713,6 +3097,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>58,'polling_station_name' =>NULL]); #2518
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>59,'polling_station_name' =>NULL]); #2519
         PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>60,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>61,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>62,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>63,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>64,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>65,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>66,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>67,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>68,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>69,'polling_station_name' =>NULL]); #2520
+        PollingStation::create(['assembly_constituency_id' =>43,'polling_number' =>70,'polling_station_name' =>NULL]); #2520
+
+
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>1,'polling_station_name' =>NULL]); #2521
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>2,'polling_station_name' =>NULL]); #2522
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>3,'polling_station_name' =>NULL]); #2523
@@ -2773,6 +3169,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>58,'polling_station_name' =>NULL]); #2578
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>59,'polling_station_name' =>NULL]); #2579
         PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>60,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>61,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>62,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>63,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>64,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>65,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>66,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>67,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>68,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>69,'polling_station_name' =>NULL]); #2580
+        PollingStation::create(['assembly_constituency_id' =>44,'polling_number' =>70,'polling_station_name' =>NULL]); #2580
+
+
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>1,'polling_station_name' =>NULL]); #2581
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>2,'polling_station_name' =>NULL]); #2582
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>3,'polling_station_name' =>NULL]); #2583
@@ -2833,6 +3241,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>58,'polling_station_name' =>NULL]); #2638
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>59,'polling_station_name' =>NULL]); #2639
         PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>60,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>61,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>62,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>63,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>64,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>65,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>66,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>67,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>68,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>69,'polling_station_name' =>NULL]); #2640
+        PollingStation::create(['assembly_constituency_id' =>45,'polling_number' =>70,'polling_station_name' =>NULL]); #2640
+
+
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>1,'polling_station_name' =>NULL]); #2641
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>2,'polling_station_name' =>NULL]); #2642
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>3,'polling_station_name' =>NULL]); #2643
@@ -2893,6 +3313,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>58,'polling_station_name' =>NULL]); #2698
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>59,'polling_station_name' =>NULL]); #2699
         PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>60,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>61,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>62,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>63,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>64,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>65,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>66,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>67,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>68,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>69,'polling_station_name' =>NULL]); #2700
+        PollingStation::create(['assembly_constituency_id' =>46,'polling_number' =>70,'polling_station_name' =>NULL]); #2700
+
+
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>1,'polling_station_name' =>NULL]); #2701
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>2,'polling_station_name' =>NULL]); #2702
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>3,'polling_station_name' =>NULL]); #2703
@@ -2953,6 +3385,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>58,'polling_station_name' =>NULL]); #2758
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>59,'polling_station_name' =>NULL]); #2759
         PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>60,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>61,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>62,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>63,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>64,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>65,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>66,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>67,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>68,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>69,'polling_station_name' =>NULL]); #2760
+        PollingStation::create(['assembly_constituency_id' =>47,'polling_number' =>70,'polling_station_name' =>NULL]); #2760
+
+
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>1,'polling_station_name' =>NULL]); #2761
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>2,'polling_station_name' =>NULL]); #2762
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>3,'polling_station_name' =>NULL]); #2763
@@ -3013,6 +3457,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>58,'polling_station_name' =>NULL]); #2818
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>59,'polling_station_name' =>NULL]); #2819
         PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>60,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>61,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>62,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>63,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>64,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>65,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>66,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>67,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>68,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>69,'polling_station_name' =>NULL]); #2820
+        PollingStation::create(['assembly_constituency_id' =>48,'polling_number' =>70,'polling_station_name' =>NULL]); #2820
+
+
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>1,'polling_station_name' =>NULL]); #2821
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>2,'polling_station_name' =>NULL]); #2822
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>3,'polling_station_name' =>NULL]); #2823
@@ -3073,6 +3529,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>58,'polling_station_name' =>NULL]); #2878
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>59,'polling_station_name' =>NULL]); #2879
         PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>60,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>61,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>62,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>63,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>64,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>65,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>66,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>67,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>68,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>69,'polling_station_name' =>NULL]); #2880
+        PollingStation::create(['assembly_constituency_id' =>49,'polling_number' =>70,'polling_station_name' =>NULL]); #2880
+
+
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>1,'polling_station_name' =>NULL]); #2881
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>2,'polling_station_name' =>NULL]); #2882
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>3,'polling_station_name' =>NULL]); #2883
@@ -3133,6 +3601,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>58,'polling_station_name' =>NULL]); #2938
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>59,'polling_station_name' =>NULL]); #2939
         PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>60,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>61,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>62,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>63,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>64,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>65,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>66,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>67,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>68,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>69,'polling_station_name' =>NULL]); #2940
+        PollingStation::create(['assembly_constituency_id' =>50,'polling_number' =>70,'polling_station_name' =>NULL]); #2940
+
+
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>1,'polling_station_name' =>NULL]); #2941
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>2,'polling_station_name' =>NULL]); #2942
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>3,'polling_station_name' =>NULL]); #2943
@@ -3193,6 +3673,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>58,'polling_station_name' =>NULL]); #2998
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>59,'polling_station_name' =>NULL]); #2999
         PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>60,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>61,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>62,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>63,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>64,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>65,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>66,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>67,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>68,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>69,'polling_station_name' =>NULL]); #3000
+        PollingStation::create(['assembly_constituency_id' =>51,'polling_number' =>70,'polling_station_name' =>NULL]); #3000
+
+
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>1,'polling_station_name' =>NULL]); #3001
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>2,'polling_station_name' =>NULL]); #3002
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>3,'polling_station_name' =>NULL]); #3003
@@ -3253,6 +3745,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>58,'polling_station_name' =>NULL]); #3058
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>59,'polling_station_name' =>NULL]); #3059
         PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>60,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>61,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>62,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>63,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>64,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>65,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>66,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>67,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>68,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>69,'polling_station_name' =>NULL]); #3060
+        PollingStation::create(['assembly_constituency_id' =>52,'polling_number' =>70,'polling_station_name' =>NULL]); #3060
+
+
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>1,'polling_station_name' =>NULL]); #3061
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>2,'polling_station_name' =>NULL]); #3062
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>3,'polling_station_name' =>NULL]); #3063
@@ -3313,6 +3817,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>58,'polling_station_name' =>NULL]); #3118
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>59,'polling_station_name' =>NULL]); #3119
         PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>60,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>61,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>62,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>63,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>64,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>65,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>66,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>67,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>68,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>69,'polling_station_name' =>NULL]); #3120
+        PollingStation::create(['assembly_constituency_id' =>53,'polling_number' =>70,'polling_station_name' =>NULL]); #3120
+
+
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>1,'polling_station_name' =>NULL]); #3121
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>2,'polling_station_name' =>NULL]); #3122
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>3,'polling_station_name' =>NULL]); #3123
@@ -3373,6 +3889,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>58,'polling_station_name' =>NULL]); #3178
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>59,'polling_station_name' =>NULL]); #3179
         PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>60,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>61,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>62,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>63,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>64,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>65,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>66,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>67,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>68,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>69,'polling_station_name' =>NULL]); #3180
+        PollingStation::create(['assembly_constituency_id' =>54,'polling_number' =>70,'polling_station_name' =>NULL]); #3180
+
+
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>1,'polling_station_name' =>NULL]); #3181
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>2,'polling_station_name' =>NULL]); #3182
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>3,'polling_station_name' =>NULL]); #3183
@@ -3433,6 +3961,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>58,'polling_station_name' =>NULL]); #3238
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>59,'polling_station_name' =>NULL]); #3239
         PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>60,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>61,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>62,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>63,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>64,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>65,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>66,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>67,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>68,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>69,'polling_station_name' =>NULL]); #3240
+        PollingStation::create(['assembly_constituency_id' =>55,'polling_number' =>70,'polling_station_name' =>NULL]); #3240
+
+
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>1,'polling_station_name' =>NULL]); #3241
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>2,'polling_station_name' =>NULL]); #3242
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>3,'polling_station_name' =>NULL]); #3243
@@ -3493,6 +4033,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>58,'polling_station_name' =>NULL]); #3298
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>59,'polling_station_name' =>NULL]); #3299
         PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>60,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>61,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>62,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>63,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>64,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>65,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>66,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>67,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>68,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>69,'polling_station_name' =>NULL]); #3300
+        PollingStation::create(['assembly_constituency_id' =>56,'polling_number' =>70,'polling_station_name' =>NULL]); #3300
+
+
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>1,'polling_station_name' =>NULL]); #3301
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>2,'polling_station_name' =>NULL]); #3302
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>3,'polling_station_name' =>NULL]); #3303
@@ -3553,6 +4105,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>58,'polling_station_name' =>NULL]); #3358
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>59,'polling_station_name' =>NULL]); #3359
         PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>60,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>61,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>62,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>63,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>64,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>65,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>66,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>67,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>68,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>69,'polling_station_name' =>NULL]); #3360
+        PollingStation::create(['assembly_constituency_id' =>57,'polling_number' =>70,'polling_station_name' =>NULL]); #3360
+
+
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>1,'polling_station_name' =>NULL]); #3361
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>2,'polling_station_name' =>NULL]); #3362
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>3,'polling_station_name' =>NULL]); #3363
@@ -3613,6 +4177,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>58,'polling_station_name' =>NULL]); #3418
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>59,'polling_station_name' =>NULL]); #3419
         PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>60,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>61,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>62,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>63,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>64,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>65,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>66,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>67,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>68,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>69,'polling_station_name' =>NULL]); #3420
+        PollingStation::create(['assembly_constituency_id' =>58,'polling_number' =>70,'polling_station_name' =>NULL]); #3420
+
+
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>1,'polling_station_name' =>NULL]); #3421
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>2,'polling_station_name' =>NULL]); #3422
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>3,'polling_station_name' =>NULL]); #3423
@@ -3673,6 +4249,18 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>58,'polling_station_name' =>NULL]); #3478
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>59,'polling_station_name' =>NULL]); #3479
         PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>60,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>61,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>62,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>63,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>64,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>65,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>66,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>67,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>68,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>69,'polling_station_name' =>NULL]); #3480
+        PollingStation::create(['assembly_constituency_id' =>59,'polling_number' =>70,'polling_station_name' =>NULL]); #3480
+
+
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>1,'polling_station_name' =>NULL]); #3481
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>2,'polling_station_name' =>NULL]); #3482
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>3,'polling_station_name' =>NULL]); #3483
@@ -3793,5 +4381,15 @@ class PollingStationSeeder extends Seeder
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>58,'polling_station_name' =>NULL]); #3598
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>59,'polling_station_name' =>NULL]); #3599
         PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>60,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>61,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>62,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>63,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>64,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>65,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>66,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>67,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>68,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>69,'polling_station_name' =>NULL]); #3600
+        PollingStation::create(['assembly_constituency_id' =>60,'polling_number' =>70,'polling_station_name' =>NULL]); #3600
     }
 }
