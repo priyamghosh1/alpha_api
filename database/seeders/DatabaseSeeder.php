@@ -31,7 +31,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PollingStationSeeder::class);
         $this->call(PersonTypeSeeder::class);
         $this->call(AreaSeeder::class);
-        $this->call(PartSeeder::class);
 
         // \App\Models\User::factory(10)->create();
         //person_types table data

@@ -147,7 +147,7 @@ class PersonController extends ApiController
                 ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
                 ->first();
             $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
-            $emailId = 'vol'.$customVoucher->last_counter;
+//            $emailId = 'vol'.$customVoucher->last_counter;
 
             $person= new Person();
             $person->member_code = $member_code;
@@ -155,40 +155,40 @@ class PersonController extends ApiController
             $person->person_name = $request['personName'];
             $person->age = $request['age'];
             $person->gender = $request['gender'];
-            $person->email= $emailId;
-            $person->mobile1= $request['mobile1'];
-            $person->mobile2= $request['mobile2'];
-            $person->voter_id= $request['voterId'];
+            $person->email= $request['email'];
+//            $person->mobile1= $request['mobile1'];
+//            $person->mobile2= $request['mobile2'];
+//            $person->voter_id= $request['voterId'];
 //            $person->polling_station_id= $request['pollingStationId'];
             $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
-            $person->aadhar_id= $request['aadharId'];
-            $person->road_name= $request['roadName'];
+//            $person->aadhar_id= $request['aadharId'];
+//            $person->road_name= $request['roadName'];
 
-            $person->guardian_name= $request['guardianName'];
-            $person->religion= $request['religion'];
-            $person->occupation= $request['occupation'];
-            $person->police_station= $request['policeStation'];
-            $person->cast= $request['cast'];
-            $person->part_no= $request['partNo'];
-            $person->post_office= $request['postOffice'];
-            $person->house_no= $request['houseNo'];
+//            $person->guardian_name= $request['guardianName'];
+//            $person->religion= $request['religion'];
+//            $person->occupation= $request['occupation'];
+//            $person->police_station= $request['policeStation'];
+//            $person->cast= $request['cast'];
+//            $person->part_no= $request['partNo'];
+//            $person->post_office= $request['postOffice'];
+//            $person->house_no= $request['houseNo'];
 //            $person->district_id= $request['district'];
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
-            $person->pin_code= $request['pinCode'];
+//            $person->pin_code= $request['pinCode'];
 //            $person->state_id = $request['state'];
             $person->state_id = 17;
-            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
-            $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
-            $person->preferable_candidate= $request['preferableCandidate'];
+//            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
+//            $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
+//            $person->preferable_candidate= $request['preferableCandidate'];
             $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
-            $person->suggestion= $request['suggestion'];
+//            $person->suggestion= $request['suggestion'];
             $person->save();
 
             $user = new User();
             $user->person_id = $person->id;
             $user->parent_id = $request['parentId'];
             $user->remark = $request['remark'];
-            $user->email = $emailId;
+            $user->email = $request['email'];
             $user->password = $request['password'];
             $user->save();
 
