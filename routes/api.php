@@ -79,7 +79,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
     Route::group(array('prefix' => 'boothVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createBoothByPollingAgent']);
-        Route::get("/{id}", [PersonController::class, 'createBoothByPollingAgent']);
+        Route::get("/{id}", [PersonController::class, 'getBoothByPollingAgent']);
     });
 
     Route::group(array('prefix' => 'volunteer'), function() {
