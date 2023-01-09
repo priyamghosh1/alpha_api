@@ -158,7 +158,7 @@ class PersonController extends ApiController
             $person->age = $request['age'];
             $person->gender = $request['gender'];
             $person->email= $request['email'];
-            $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
+            $person->polling_station_id= $request['pollingStationId'];
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->state_id = 17;
             $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
