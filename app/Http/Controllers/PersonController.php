@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\VolunteerResource;
 use App\Models\Person;
 use App\Models\CustomVoucher;
 use App\Models\PollingStation;
@@ -306,32 +307,10 @@ class PersonController extends ApiController
             $person->age = $request['age'];
             $person->gender = $request['gender'];
             $person->email= $request['email'];
-//            $person->mobile1= $request['mobile1'];
-//            $person->mobile2= $request['mobile2'];
-//            $person->voter_id= $request['voterId'];
-//            $person->polling_station_id= $request['pollingStationId'];
             $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
-//            $person->aadhar_id= $request['aadharId'];
-//            $person->road_name= $request['roadName'];
-
-//            $person->guardian_name= $request['guardianName'];
-//            $person->religion= $request['religion'];
-//            $person->occupation= $request['occupation'];
-//            $person->police_station= $request['policeStation'];
-//            $person->cast= $request['cast'];
-//            $person->part_no= $request['partNo'];
-//            $person->post_office= $request['postOffice'];
-//            $person->house_no= $request['houseNo'];
-//            $person->district_id= $request['district'];
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
-//            $person->pin_code= $request['pinCode'];
-//            $person->state_id = $request['state'];
             $person->state_id = 17;
-//            $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
-//            $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
-//            $person->preferable_candidate= $request['preferableCandidate'];
             $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
-//            $person->suggestion= $request['suggestion'];
             $person->save();
 
             $user = new User();
@@ -358,14 +337,15 @@ class PersonController extends ApiController
             DB::rollBack();
             return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
         }
-        $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender','people.part_no','people.house_no','people.road_name',
-            'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark','people.cast','people.post_office','people.pin_code',
-            'users.email','polling_stations.polling_number','people.guardian_name','people.religion','people.occupation','people.police_station','people.preferable_candidate',
-            'people.suggestion','people.previous_voting_history','people.satisfied_by_present_gov','people.aadhar_id','people.district_id','people.polling_station_id')
+        $newPollingMember = Person::select('people.member_code','people.age', 'people.gender',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
-        return $this->successResponse(new PollingMemberResource($newPollingMember),'User added successfully');
+
+//        return $people;
+        return $this->successResponse(new VolunteerResource($newPollingMember),'User added successfully');
     }
 
     public function getVolunteerByPolingMember($id){
@@ -396,9 +376,9 @@ class PersonController extends ApiController
             left join polling_stations ON polling_stations.id = people.polling_station_id
             where people.person_type_id=9 and users.parent_id = $id");
 
-        return $people;
+//        return $people;
 
-        return $this->successResponse(PollingMemberResource::collection($people));
+        return $this->successResponse(VolunteerResource::collection($people));
     }
 
     public function getBoothByPollingAgent($id){
