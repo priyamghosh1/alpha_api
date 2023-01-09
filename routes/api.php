@@ -72,15 +72,20 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     });
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
-        Route::post("/booth", [PersonController::class, 'createBoothByPollingAgent']);
-        Route::get("/booth/{id}", [PersonController::class, 'createBoothByPollingAgent']);
-        Route::post("/", [PersonController::class, 'store']);
+//        Route::post("/booth", [PersonController::class, 'createBoothByPollingAgent']);
+//        Route::get("/booth/{id}", [PersonController::class, 'createBoothByPollingAgent']);
+//        Route::post("/", [PersonController::class, 'store']);
+    });
+
+    Route::group(array('prefix' => 'boothVolunteer'), function() {
+        Route::post("/", [PersonController::class, 'createBoothByPollingAgent']);
+        Route::get("/{id}", [PersonController::class, 'createBoothByPollingAgent']);
     });
 
     Route::group(array('prefix' => 'volunteer'), function() {
         Route::post("/", [PersonController::class, 'createVolunteerByBooth']);
         Route::get("/{id}", [PersonController::class, 'getVolunteerByPolingMember']);
-        Route::get("/booth/{id}", [PersonController::class, 'getVolunteerByBoothMember']);
+//        Route::get("/booth/{id}", [PersonController::class, 'getVolunteerByBoothMember']);
 //        Route::post("/", [PollingVolunteer::class, 'storePollingStationGeneralMember']);
         Route::get("/{volunteerId}/workers", [VolunteerController::class, 'fetchGeneralWorkersByVolunteerId']);
     });
