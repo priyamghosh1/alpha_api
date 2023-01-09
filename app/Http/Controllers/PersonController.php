@@ -193,7 +193,7 @@ class PersonController extends ApiController
             $user->save();
 
             $fileName = $person->id.'.jpg';
-            $path = $request->file('file')->move(public_path("/voter_pic"), $fileName);
+            // $path = $request->file('file')->move(public_path("/voter_pic"), $fileName);
 
 //            $user = new User();
 //            $user->person_id = $person->id;
