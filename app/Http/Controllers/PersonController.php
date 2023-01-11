@@ -398,6 +398,7 @@ class PersonController extends ApiController
             left join polling_stations ON polling_stations.id = people.polling_station_id
             where people.person_type_id=7 and users.parent_id = $id");
 
+            // return $people;
         return $this->successResponse(PollingVolunteerResource::collection($people));
     }
 

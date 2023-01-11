@@ -15,16 +15,17 @@ class PollingVolunteerResource extends JsonResource
             "memberCode" => $this->member_code,
             "personName" => $this->person_name,
             "parentName" => $this->parent_name,
-            "remark" => $this->remark,
-            "areaDescription" => $this->area_description,
+            // "remark" => $this->remark,
+            // "areaDescription" => $this->area_description,
             "email" => $this->email,
-            "personTypeName" => $this->person_type_name,
+            // "personTypeName" => $this->person_type_name,
             "age" => $this->age,
             "gender" => $this->gender,
-            "mobile1" => $this->mobile1,
-            "mobile2" => $this->mobile2,
-            "voterId" => $this->voter_id,
+            // "mobile1" => $this->mobile1,
+            // "mobile2" => $this->mobile2,
+            // "voterId" => $this->voter_id,
             "assemblyName" => $this->assembly_name,
+            "districtId" => $this->district_id,
             "pollingNumber" => $this->polling_number
         ];
     }
