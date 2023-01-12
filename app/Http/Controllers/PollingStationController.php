@@ -32,7 +32,8 @@ class PollingStationController extends Controller
         $pollingStation = PollingStation::find($requestedData->pollingStationId);
         $pollingStation->polling_station_name = $requestedData->pollingStationName;
         $pollingStation->update();
-        return response()->json(['success'=>1,'data'=> PollingStationResource::collection($pollingStation)], 200,[],JSON_NUMERIC_CHECK);
+        // return response()->json(['success'=>1,'data'=> PollingStationResource::collection($pollingStation)], 200,[],JSON_NUMERIC_CHECK);
+        return response()->json(['success'=>1,'data'=> $pollingStation], 200,[],JSON_NUMERIC_CHECK);
     }
 
     public function fetchVolunteerByPollingId($pollingId)
