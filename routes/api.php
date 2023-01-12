@@ -90,7 +90,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::get("/{id}", [PersonController::class, 'getVolunteerByPolingMember']);
 //        Route::get("/booth/{id}", [PersonController::class, 'getVolunteerByBoothMember']);
 //        Route::post("/", [PollingVolunteer::class, 'storePollingStationGeneralMember']);
-        Route::get("/{volunteerId}/members", [VolunteerController::class, 'fetchGeneralMembersByVolunteerId']);
+        Route::get("/{volunteerId}/members", [VolunteerController::class, 'fetchGeneralWorkersByVolunteerId']);
     });
 
     Route::group(array('prefix' => 'pollingStations'), function() {
