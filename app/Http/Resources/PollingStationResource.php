@@ -20,6 +20,7 @@ class PollingStationResource extends JsonResource
     {
         return [
             "pollingStationId" => $this->id,
+            "pollingStationName" => $this->polling_station_name,
             "pollingNumber" => $this->polling_number
         ];
     }

@@ -148,7 +148,8 @@ class PersonController extends ApiController
 //                ->where('polling_stations.id',$request->input('pollingStationId'))
                 ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
                 ->first();
-            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
+//            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
+            $member_code = 'asmbly' . $customVoucher->last_counter;
 //            $emailId = 'vol'.$customVoucher->last_counter;
 
             $person= new Person();
