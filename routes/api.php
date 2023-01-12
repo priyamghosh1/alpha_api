@@ -94,8 +94,8 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     });
 
     Route::group(array('prefix' => 'pollingStations'), function() {
-
         Route::get("/{assemblyId}", [PollingStationController::class, 'fetchPollingStationByAssemblyId']);
+        Route::post("/", [PollingStationController::class, 'updatePollingStation']);
         Route::get("/{pollingId}/volunteers", [PollingStationController::class, 'fetchVolunteerByPollingId']);
         Route::get("/{userParentId}/workers", [PollingStationController::class, 'fetchGeneralWorkersByPollingId']);
     });
