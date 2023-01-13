@@ -232,7 +232,46 @@ class PersonController extends ApiController
         return $this->successResponse(new PollingVolunteerResource($newPollingMember),'User added successfully');
     }
 
-    public  function createAssemblyVolunteerByDistrictAdmin(Request $request){
+    public function getAssemblyVolunteerByDistrictAdmin($id){
+        $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
+            parent_person.person_name as parent_name, users.email,
+            person_types.person_type_name, people.age, people.gender,people.polling_station_id,
+            assemblies.assembly_name, polling_stations.polling_number,people.district_id from users
+
+            inner join people ON people.id = users.person_id
+            left join users as parent_user on parent_user.id = users.parent_id
+            left join people as parent_person on  parent_user.id=parent_person.id
+            inner join person_types ON person_types.id = people.person_type_id
+            left join assemblies ON assemblies.id = people.assembly_constituency_id
+            left join polling_stations ON polling_stations.id = people.polling_station_id
+            where people.person_type_id=6 and users.parent_id = $id");
+
+        return $this->successResponse(AssemblyVolunteerResource::collection($people));
+    }
+
+    public function updateAssemblyVolunteerByDistrictAdmin(Request $request){
+        $person= Person::find($request['id']);
+        $person->person_name = $request['personName'];
+        $person->age = $request['age'];
+        $person->gender = $request['gender'];
+        $person->email= $request['email'];
+        $person->assembly_constituency_id= $request['assembly_constituency_id'];
+        $person->update();
+
+        $user = User::wherePersonId($person->id)->first();
+        $user->email = $request['email'];
+        $user->update();
+
+        $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            ->join('users','users.person_id','people.id')
+            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            ->where('people.id',$person->id)->first();
+        return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer), 'User added successfully');
+    }
+
+    public function createAssemblyVolunteerByDistrictAdmin(Request $request){
         DB::beginTransaction();
 
         try{
@@ -302,7 +341,7 @@ class PersonController extends ApiController
             ->join('users','users.person_id','people.id')
             ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
-        return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer)),'User added successfully');
+        return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer), 'User added successfully');
     }
 
 
@@ -514,7 +553,6 @@ class PersonController extends ApiController
             left join polling_stations ON polling_stations.id = people.polling_station_id
             where people.person_type_id=7 and users.parent_id = $id");
 
-            // return $people;
         return $this->successResponse(PollingVolunteerResource::collection($people));
     }
 

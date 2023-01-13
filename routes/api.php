@@ -92,8 +92,9 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 //    });
 
     Route::group(array('prefix' => 'assemblyVolunteer'), function() {
+        Route::get("/{id}", [PersonController::class, 'getAssemblyVolunteerByDistrictAdmin']);
         Route::post("/", [PersonController::class, 'createAssemblyVolunteerByDistrictAdmin']);
-//        Route::get("/{id}", [PersonController::class, 'getPollingVolunteerByAssembly']);
+        Route::put("/", [PersonController::class, 'updateAssemblyVolunteerByDistrictAdmin']);
     });
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
