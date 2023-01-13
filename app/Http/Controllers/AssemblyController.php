@@ -27,8 +27,8 @@ class AssemblyController extends ApiController
 
     public function fetchAssemblyByDistrictId($districtId)
     {
-        $districtWithAssembly = Assembly::select('assemblies.id','assemblies.assembly_name','assemblies.district_id','districts.district_name')
-        ->join('district_lists','assemblies.district_id','districts.id')
+        $districtWithAssembly = Assembly::select('assemblies.id','assemblies.assembly_name','assemblies.district_id','district_lists.district_name')
+        ->join('district_lists','assemblies.district_id','district_lists.id')
         ->whereDistrictId($districtId)
         ->get();
 

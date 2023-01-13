@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('/me', function(Request $request) {
         return auth()->user();
     });
+//    Route::get("/getAllAssemblies", [PersonController::class, 'getPollingVolunteerByAssembly']);
     Route::get("user",[UserController::class,'getCurrentUser']);
     Route::get("logout",[UserController::class,'logout']);
 
@@ -74,6 +75,16 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 //        Route::post("/", [PersonController::class, 'createAssemblyConstitutionByAssembly']);
 //        Route::get("/{id}", [PersonController::class, 'getPollingVolunteerByAssembly']);
 //    });
+
+    Route::group(array('prefix' => 'assembly'), function() {
+
+//        Route::get("/", [AssemblyController::class, 'index']);
+        Route::get("/district/{id}", [AssemblyController::class, 'fetchAssemblyByDistrictId']);
+
+//        Route::get("/allData", [AssemblyController::class, 'fetchAssemblyConstituenciesAlongWithDistricts']);
+//        Route::get("/admin/dashboard/{assemblyId}", [AssemblyAdminDashboard::class, 'get_report']);
+
+    });
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createPollingVolunteerByAssembly']);
