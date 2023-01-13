@@ -83,6 +83,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::group(array('prefix' => 'boothVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createBoothByPollingAgent']);
         Route::get("/{id}", [PersonController::class, 'getBoothByPollingAgent']);
+        Route::get("/{boothId}/members", [PersonController::class, 'fetchGeneralWorkersByBoothId']);
     });
 
     Route::group(array('prefix' => 'volunteer'), function() {
@@ -112,6 +113,8 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
 
 Route::group(array('prefix' => 'dev'), function() {
+
+    Route::get("/booth/{boothId}", [PersonController::class, 'fetchGeneralWorkersByBoothId']);
 
     Route::group(array('prefix' => 'assembly'), function() {
 
