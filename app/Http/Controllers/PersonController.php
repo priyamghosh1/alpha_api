@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\AssemblyResource;
+use App\Http\Resources\AssemblyVolunteerResource;
 use App\Http\Resources\BoothVolunteerResource;
 use App\Http\Resources\GeneralWorkerResource;
 use App\Http\Resources\PollingVolunteerResource;
@@ -191,7 +193,7 @@ class PersonController extends ApiController
                 ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
                 ->first();
 //            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
-            $member_code = 'asmbly' . $customVoucher->last_counter;
+            $member_code = 'polling' . $customVoucher->last_counter;
 //            $emailId = 'vol'.$customVoucher->last_counter;
 
             $person= new Person();
@@ -215,9 +217,6 @@ class PersonController extends ApiController
             $user->password = $request['password'];
             $user->save();
 
-            $fileName = $person->id.'.jpg';
-            // $path = $request->file('file')->move(public_path("/voter_pic"), $fileName);
-
             DB::commit();
 
         }catch(\Exception $e){
@@ -232,6 +231,80 @@ class PersonController extends ApiController
             ->where('people.id',$person->id)->first();
         return $this->successResponse(new PollingVolunteerResource($newPollingMember),'User added successfully');
     }
+
+    public  function createAssemblyVolunteerByDistrictAdmin(Request $request){
+        DB::beginTransaction();
+
+        try{
+            $now = Carbon::now();
+            $currentYear = $now->year;
+
+            $voucher="AssemblyVolunteer";
+            $customVoucher=CustomVoucher::where('voucher_name','=',$voucher)->first();
+            if($customVoucher) {
+                //already exist
+                $customVoucher->last_counter = $customVoucher->last_counter + 1;
+                $customVoucher->save();
+            }else{
+                //fresh entry
+                $customVoucher= new CustomVoucher();
+                $customVoucher->voucher_name=$voucher;
+                $customVoucher->accounting_year= $currentYear;
+                $customVoucher->last_counter=1;
+                $customVoucher->delimiter='-';
+                $customVoucher->prefix='PA';
+                $customVoucher->save();
+            }
+            //adding Zeros before number
+            $counter = str_pad($customVoucher->last_counter,3,"0",STR_PAD_LEFT);
+
+            $assemblyDetails = PollingStation::
+            select(DB::raw('SUBSTRING(assemblies.assembly_name, 1, 3) AS assembly_code'))
+                ->join('assemblies','assemblies.id','polling_stations.assembly_constituency_id')
+//                ->where('polling_stations.id',$request->input('pollingStationId'))
+                ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
+                ->first();
+//            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
+            $member_code = 'assembly' . $customVoucher->last_counter;
+//            $emailId = 'vol'.$customVoucher->last_counter;
+
+            $person= new Person();
+            $person->member_code = $member_code;
+            $person->person_type_id = $request['personTypeId'];
+            $person->person_name = $request['personName'];
+            $person->age = $request['age'];
+            $person->gender = $request['gender'];
+            $person->email= $request['email'];
+//            $person->polling_station_id= $request['pollingStationId'];
+            $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
+            $person->state_id = 17;
+//            $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
+            $person->assembly_constituency_id= $request['assembly_constituency_id'];
+            $person->save();
+
+            $user = new User();
+            $user->person_id = $person->id;
+            $user->parent_id = $request['parentId'];
+            $user->remark = $request['remark'];
+            $user->email = $request['email'];
+            $user->password = $request['password'];
+            $user->save();
+
+            DB::commit();
+
+        }catch(\Exception $e){
+            DB::rollBack();
+            return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
+        }
+        $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            ->join('users','users.person_id','people.id')
+            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            ->where('people.id',$person->id)->first();
+        return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer)),'User added successfully');
+    }
+
 
     public  function createBoothByPollingAgent(Request $request){
         DB::beginTransaction();
