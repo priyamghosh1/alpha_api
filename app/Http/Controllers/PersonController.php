@@ -272,6 +272,8 @@ class PersonController extends ApiController
     }
 
     public function createAssemblyVolunteerByDistrictAdmin(Request $request){
+
+        // return (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
         DB::beginTransaction();
 
         try{
@@ -297,12 +299,12 @@ class PersonController extends ApiController
             //adding Zeros before number
             $counter = str_pad($customVoucher->last_counter,3,"0",STR_PAD_LEFT);
 
-            $assemblyDetails = PollingStation::
-            select(DB::raw('SUBSTRING(assemblies.assembly_name, 1, 3) AS assembly_code'))
-                ->join('assemblies','assemblies.id','polling_stations.assembly_constituency_id')
-//                ->where('polling_stations.id',$request->input('pollingStationId'))
-                ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
-                ->first();
+//             $assemblyDetails = PollingStation::
+//             select(DB::raw('SUBSTRING(assemblies.assembly_name, 1, 3) AS assembly_code'))
+//                 ->join('assemblies','assemblies.id','polling_stations.assembly_constituency_id')
+// //                ->where('polling_stations.id',$request->input('pollingStationId'))
+//                 ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
+//                 ->first();
 //            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
             $member_code = 'assembly' . $customVoucher->last_counter;
 //            $emailId = 'vol'.$customVoucher->last_counter;
@@ -318,7 +320,7 @@ class PersonController extends ApiController
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->state_id = 17;
 //            $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
-            $person->assembly_constituency_id= $request['assembly_constituency_id'];
+            $person->assembly_constituency_id= $request['assemblyConstituencyId'];
             $person->save();
 
             $user = new User();
@@ -337,10 +339,11 @@ class PersonController extends ApiController
         }
         $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
             'users.id','users.person_id','users.remark','people.cast',
-            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            'users.email','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
-            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            // ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
+            // return $assemblyVolunteer;
         return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer), 'User added successfully');
     }
 
