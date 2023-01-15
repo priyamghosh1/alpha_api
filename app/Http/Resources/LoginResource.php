@@ -30,6 +30,7 @@ class LoginResource extends JsonResource
             'userTypeId' => $this->person->person_type_id,
             'userTypeName' => $this->person->personTypeName,
             'assemblyConstituencyId' => $this->person->assembly_constituency_id,
+            'districtId' => $this->person->district_id,
             'token' => $this->token,
         ];
     }

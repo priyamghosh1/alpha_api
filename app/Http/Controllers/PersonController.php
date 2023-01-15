@@ -264,9 +264,9 @@ class PersonController extends ApiController
 
         $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
             'users.id','users.person_id','users.remark','people.cast',
-            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            'users.email','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
-            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            // ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
         return $this->successResponse(new AssemblyVolunteerResource($assemblyVolunteer), 'User added successfully');
     }

@@ -36,6 +36,7 @@ class PersonResource extends JsonResource
             "aadharId" => $this->aadhar_id,
             "voterId" => $this->voter_id,
             "assemblyConstituencyId" => $this->assembly_constituency_id,
+            "districtId" => $this->district_id,
             "pollingStationId" => $this->polling_station_id,
         );
     }
