@@ -234,7 +234,7 @@ class PersonController extends ApiController
 
     public function getAssemblyVolunteerByDistrictAdmin($id){
         $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
-            parent_person.person_name as parent_name, users.email,
+            parent_person.person_name as parent_name, users.email,assemblies.id as assembly_constituency_id,
             person_types.person_type_name, people.age, people.gender,people.polling_station_id,
             assemblies.assembly_name, polling_stations.polling_number,people.district_id from users
 
@@ -250,16 +250,17 @@ class PersonController extends ApiController
     }
 
     public function updateAssemblyVolunteerByDistrictAdmin(Request $request){
-        $person= Person::find($request['id']);
-        $person->person_name = $request['personName'];
-        $person->age = $request['age'];
-        $person->gender = $request['gender'];
-        $person->email= $request['email'];
-        $person->assembly_constituency_id= $request['assembly_constituency_id'];
+        $requestedData = (object)$request->json()->all();
+        $person= Person::find($requestedData->personId);
+        $person->person_name = $requestedData->personName;
+        $person->age = $requestedData->age;
+        $person->gender = $requestedData->gender;
+        $person->email= $requestedData->email;
+        $person->assembly_constituency_id= $requestedData->assemblyId;
         $person->update();
 
         $user = User::wherePersonId($person->id)->first();
-        $user->email = $request['email'];
+        $user->email = $requestedData->email;
         $user->update();
 
         $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
@@ -337,10 +338,11 @@ class PersonController extends ApiController
             DB::rollBack();
             return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
         }
-        $assemblyVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
-            'users.id','users.person_id','users.remark','people.cast',
+        $assemblyVolunteer = Person::select('people.member_code','assemblies.assembly_name','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',DB::raw("assemblies.id as assembly_constituency_id"),
             'users.email','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
+            ->join('assemblies','assemblies.id','people.assembly_constituency_id')
             // ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
             // return $assemblyVolunteer;

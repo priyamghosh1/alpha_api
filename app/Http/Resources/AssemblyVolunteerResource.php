@@ -29,7 +29,7 @@ class AssemblyVolunteerResource extends JsonResource
             // "mobile2" => $this->mobile2,
             // "voterId" => $this->voter_id,
             "assemblyName" => $this->assembly_name,
-            // "assemblyId" => $this->assembly_constituency_id,
+            "assemblyId" => $this->assembly_constituency_id,
             "districtId" => $this->district_id
         ];
     }
