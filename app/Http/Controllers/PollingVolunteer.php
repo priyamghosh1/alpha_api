@@ -12,6 +12,20 @@ use Illuminate\Support\Facades\DB;
 
 class PollingVolunteer extends ApiController
 {
+    public function fetchGeneralWorkersByPollingVolunteerId($pollingVolunteerId){
+        $return_array = [];
+        $boothVolunteers = DB::select("select users.person_id, users.parent_id from people
+                left join users on users.person_id = people.id
+                where users.parent_id =$pollingVolunteerId and people.person_type_id = 8");
+
+        $personController = new PersonController();
+        foreach($boothVolunteers as $boothVol){
+            $response = json_decode($personController->fetchGeneralWorkersByBoothId($boothVol->person_id)->content(),true)['data'] ;
+            $return_array = array_merge($return_array,$response);
+        }
+        return response()->json(['success'=>1,'data'=> $return_array], 200,[],JSON_NUMERIC_CHECK);
+    }
+
     public function storePollingStationGeneralMember(Request $request)
     {
         DB::beginTransaction();

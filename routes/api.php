@@ -95,11 +95,13 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::get("/{id}", [PersonController::class, 'getAssemblyVolunteerByDistrictAdmin']);
         Route::post("/", [PersonController::class, 'createAssemblyVolunteerByDistrictAdmin']);
         Route::put("/", [PersonController::class, 'updateAssemblyVolunteerByDistrictAdmin']);
+        Route::get("/{assemblyVolunteerId}/members", [AssemblyController::class, 'fetchGeneralWorkersByAssemblyVolunteerId']);
     });
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createPollingVolunteerByAssembly']);
         Route::get("/{id}", [PersonController::class, 'getPollingVolunteerByAssembly']);
+        Route::get("/{pollingVolunteerId}/members", [PollingVolunteer::class, 'fetchGeneralWorkersByPollingVolunteerId']);
     });
 
     Route::group(array('prefix' => 'boothVolunteer'), function() {
@@ -135,6 +137,8 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
 
 Route::group(array('prefix' => 'dev'), function() {
+
+    Route::get("/{assemblyVolunteerId}/members", [AssemblyController::class, 'fetchGeneralWorkersByAssemblyVolunteerId']);
 
     Route::get("/booth/{boothId}", [PersonController::class, 'fetchGeneralWorkersByBoothId']);
 
