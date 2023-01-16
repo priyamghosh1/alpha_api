@@ -212,10 +212,10 @@ class PersonController extends ApiController
             $person= new Person();
             $person->member_code = $member_code;
             $person->person_type_id = $request['personTypeId'];
-            $person->person_name = $request['personName'];
+            $person->person_name = strtoupper($request['personName']);
             $person->age = $request['age'];
             $person->gender = $request['gender'];
-            $person->email= $request['email'];
+            $person->email= strtoupper($request['email']);
             $person->polling_station_id= $request['pollingStationId'];
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->state_id = 17;
@@ -226,7 +226,7 @@ class PersonController extends ApiController
             $user->person_id = $person->id;
             $user->parent_id = $request['parentId'];
             $user->remark = $request['remark'];
-            $user->email = $request['email'];
+            $user->email = strtoupper($request['email']);
             $user->password = $request['password'];
             $user->save();
 
@@ -401,10 +401,10 @@ class PersonController extends ApiController
             $person= new Person();
             $person->member_code = $member_code;
             $person->person_type_id = $request['personTypeId'];
-            $person->person_name = $request['personName'];
+            $person->person_name = strtoupper($request['personName']);
             $person->age = $request['age'];
             $person->gender = $request['gender'];
-            $person->email= $request['email'];
+            $person->email= strtoupper($request['email']);
             $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->state_id = 17;
@@ -414,12 +414,12 @@ class PersonController extends ApiController
             $user = new User();
             $user->person_id = $person->id;
             $user->parent_id = $request['parentId'];
-            $user->remark = $request['remark'];
-            $user->email = $request['email'];
+            $user->remark = strtoupper($request['remark']);
+            $user->email = strtoupper($request['email']);
             $user->password = $request['password'];
             $user->save();
 
-            $fileName = $person->id.'.jpg';
+//            $fileName = $person->id.'.jpg';
             // $path = $request->file('file')->move(public_path("/voter_pic"), $fileName);
 
             DB::commit();
@@ -479,10 +479,10 @@ class PersonController extends ApiController
             $person= new Person();
             $person->member_code = $member_code;
             $person->person_type_id = $request['personTypeId'];
-            $person->person_name = $request['personName'];
+            $person->person_name = strtoupper($request['personName']);
             $person->age = $request['age'];
             $person->gender = $request['gender'];
-            $person->email= $request['email'];
+            $person->email= strtoupper($request['email']);
             $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->state_id = 17;
@@ -492,12 +492,12 @@ class PersonController extends ApiController
             $user = new User();
             $user->person_id = $person->id;
             $user->parent_id = $request['parentId'];
-            $user->remark = $request['remark'];
-            $user->email = $request['email'];
+            $user->remark = strtoupper($request['remark']);
+            $user->email = strtoupper($request['email']);
             $user->password = $request['password'];
             $user->save();
 
-            $fileName = $person->id.'.jpg';
+//            $fileName = $person->id.'.jpg';
             // $path = $request->file('file')->move(public_path("/voter_pic"), $fileName);
 
 //            $user = new User();
@@ -682,7 +682,7 @@ class PersonController extends ApiController
             $person= new Person();
             $person->member_code = $member_code;
             $person->person_type_id = $request['personTypeId'];
-            $person->person_name = $request['personName'];
+            $person->person_name = strtoupper($request['personName']);
             $person->age = $request['age'];
             $person->gender = $request['gender'];
             $person->email= $emailId;
@@ -692,15 +692,15 @@ class PersonController extends ApiController
 //            $person->polling_station_id= $request['pollingStationId'];
             $person->polling_station_id= (Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id;
             $person->aadhar_id= $request['aadharId'];
-            $person->road_name= $request['roadName'];
+            $person->road_name= strtoupper($request['roadName']);
 
-            $person->guardian_name= $request['guardianName'];
-            $person->religion= $request['religion'];
-            $person->occupation= $request['occupation'];
-            $person->police_station= $request['policeStation'];
-            $person->cast= $request['cast'];
-            $person->part_no= $request['partNo'];
-            $person->post_office= $request['postOffice'];
+            $person->guardian_name= strtoupper($request['guardianName']);
+            $person->religion= strtoupper($request['religion']);
+            $person->occupation= strtoupper($request['occupation']);
+            $person->police_station= strtoupper($request['policeStation']);
+            $person->cast= strtoupper($request['cast']);
+            $person->part_no= strtoupper($request['partNo']);
+            $person->post_office= strtoupper($request['postOffice']);
             $person->house_no= $request['houseNo'];
 //            $person->district_id= $request['district'];
             $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
@@ -711,13 +711,13 @@ class PersonController extends ApiController
             $person->satisfied_by_present_gov= $request['satisfiedByPresentGov'] === 'null' ? 'yes' : $request['satisfiedByPresentGov'];
             $person->previous_voting_history= $request['previousVotingHistory'] === 'null' ? 'no' : $request['previousVotingHistory'];
             $person->preferable_candidate= $request['preferableCandidate'];
-            $person->suggestion= $request['suggestion'];
+            $person->suggestion= strtoupper($request['suggestion']);
             $person->save();
 
             $user = new User();
             $user->person_id = $person->id;
             $user->parent_id = $request['parentId'];
-            $user->remark = $request['remark'];
+            $user->remark = strtoupper($request['remark']);
             $user->email = $emailId;
             $user->password = $request['password'];
             $user->save();
