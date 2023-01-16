@@ -31,9 +31,22 @@ class PersonController extends ApiController
         //
     }
 
-    public function create()
+    public function fetchVolunteerByBoothId($boothId)
     {
-        //
+        $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
+            parent_person.person_name as parent_name, users.email,
+            person_types.person_type_name, people.age, people.gender,people.polling_station_id,
+            assemblies.assembly_name, polling_stations.polling_number,people.district_id from users
+
+            inner join people ON people.id = users.person_id
+            left join users as parent_user on parent_user.id = users.parent_id
+            left join people as parent_person on  parent_user.id=parent_person.id
+            inner join person_types ON person_types.id = people.person_type_id
+            left join assemblies ON assemblies.id = people.assembly_constituency_id
+            left join polling_stations ON polling_stations.id = people.polling_station_id
+            where people.person_type_id=9 and users.parent_id = $boothId");
+
+        return $this->successResponse(VolunteerResource::collection($people));
     }
 
     public function fetchGeneralWorkersByBoothId($boothId)
