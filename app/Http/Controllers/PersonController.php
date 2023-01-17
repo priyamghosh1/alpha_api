@@ -176,14 +176,14 @@ class PersonController extends ApiController
     public function updatePollingVolunteerByAssembly(Request $request){
         $requestedData = (object)$request->json()->all();
         $person= Person::find($requestedData->personId);
-        $person->person_name = $requestedData->personName;
+        $person->person_name = strtoupper($requestedData->personName);
         $person->age = $requestedData->age;
         $person->gender = $requestedData->gender;
-        $person->email= $requestedData->email;
+        $person->email= strtoupper($requestedData->email);
         $person->update();
 
         $user = User::wherePersonId($person->id)->first();
-        $user->email = $requestedData->email;
+        $user->email = strtoupper($requestedData->email);
         $user->update();
 
         $newPollingMember = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
@@ -388,14 +388,14 @@ class PersonController extends ApiController
     public function updateBoothByPollingAgent(Request $request){
         $requestedData = (object)$request->json()->all();
         $person= Person::find($requestedData->personId);
-        $person->person_name = $requestedData->personName;
+        $person->person_name = strtoupper($requestedData->personName);
         $person->age = $requestedData->age;
         $person->gender = $requestedData->gender;
-        $person->email= $requestedData->email;
+        $person->email= strtoupper($requestedData->email);
         $person->update();
 
         $user = User::wherePersonId($person->id)->first();
-        $user->email = $requestedData->email;
+        $user->email = strtoupper($requestedData->email);
         $user->update();
 
         $newPollingMember = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
@@ -483,6 +483,29 @@ class PersonController extends ApiController
 //        return $people;
         return $this->successResponse(new BoothVolunteerResource($newPollingMember),'User added successfully');
 //        return $this->successResponse(new PollingMemberResource($newPollingMember),'User added successfully');
+    }
+
+    public function updateVolunteerByBooth(Request $request){
+        $requestedData = (object)$request->json()->all();
+        $person= Person::find($requestedData->personId);
+        $person->person_name = strtoupper($requestedData->personName);
+        $person->age = $requestedData->age;
+        $person->gender = $requestedData->gender;
+        $person->email= strtoupper($requestedData->email);
+        $person->update();
+
+        $user = User::wherePersonId($person->id)->first();
+        $user->email = strtoupper($requestedData->email);
+        $user->update();
+
+        $newPollingMember = Person::select('people.member_code','people.age', 'people.gender', 'people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            ->join('users','users.person_id','people.id')
+            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            ->where('people.id',$person->id)->first();
+
+        return $this->successResponse(new VolunteerResource($newPollingMember),'User added successfully');
     }
 
     public function createVolunteerByBooth(Request $request){
@@ -796,7 +819,7 @@ class PersonController extends ApiController
     public function updatePollingAgent(Request $request)
     {
         $person= Person::find($request->input('personId'));
-        $person->person_name = $request->input('personName');
+        $person->person_name = strtoupper($request->input('personName'));
         $person->age = $request->input('age');
         $person->gender = $request->input('gender');
         $person->mobile1= $request->input('mobile1');
@@ -804,22 +827,22 @@ class PersonController extends ApiController
         $person->voter_id= $request->input('voterId');
         $person->polling_station_id= $request->input('pollingStationId');
         $person->aadhar_id= $request->input('aadharId');
-        $person->road_name= $request->input('roadName');
+        $person->road_name= strtoupper($request->input('roadName'));
 
-        $person->guardian_name= $request->input('guardianName');
-        $person->religion= $request->input('religion');
-        $person->occupation= $request->input('occupation');
-        $person->police_station= $request->input('policeStation');
-        $person->cast= $request->input('cast');
-        $person->part_no= $request->input('partNo');
-        $person->post_office= $request->input('postOffice');
-        $person->house_no= $request->input('houseNo');
-        $person->district_id= $request->input('district');
+        $person->guardian_name= strtoupper($request->input('guardianName'));
+        $person->religion= strtoupper($request->input('religion'));
+        $person->occupation= strtoupper($request->input('occupation'));
+        $person->police_station= strtoupper($request->input('policeStation'));
+        $person->cast= strtoupper($request->input('cast'));
+        $person->part_no= strtoupper($request->input('partNo'));
+        $person->post_office= strtoupper($request->input('postOffice'));
+        $person->house_no= strtoupper($request->input('houseNo'));
+        $person->district_id= strtoupper($request->input('district'));
         $person->pin_code= $request->input('pinCode');
         $person->satisfied_by_present_gov= $request->input('satisfiedByPresentGov');
         $person->previous_voting_history= $request->input('previousVotingHistory');
         $person->preferable_candidate= $request->input('preferableCandidate');
-        $person->suggestion= $request->input('suggestion');
+        $person->suggestion= strtoupper($request->input('suggestion'));
         $person->update();
         $newPollingMember = Person::select('people.member_code','people.person_name','people.age', 'people.gender','people.part_no','people.house_no','people.road_name',
             'people.mobile1', 'people.mobile2', 'people.voter_id','users.id','users.person_id','users.remark','people.cast','people.post_office','people.pin_code',
