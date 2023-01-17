@@ -100,13 +100,14 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createPollingVolunteerByAssembly']);
-        Route::post("/", [PersonController::class, 'updatePollingVolunteerByAssembly']);
+        Route::put("/", [PersonController::class, 'updatePollingVolunteerByAssembly']);
         Route::get("/{id}", [PersonController::class, 'getPollingVolunteerByAssembly']);
         Route::get("/{pollingVolunteerId}/members", [PollingVolunteer::class, 'fetchGeneralWorkersByPollingVolunteerId']);
     });
 
     Route::group(array('prefix' => 'boothVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createBoothByPollingAgent']);
+        Route::put("/", [PersonController::class, 'updateBoothByPollingAgent']);
         Route::get("/{id}", [PersonController::class, 'getBoothByPollingAgent']);
         Route::get("/{boothId}/members", [PersonController::class, 'fetchGeneralWorkersByBoothId']);
         Route::get("/{boothId}/volunteer", [PersonController::class, 'fetchVolunteerByBoothId']);
