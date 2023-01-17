@@ -173,6 +173,29 @@ class PersonController extends ApiController
         return $this->successResponse(PollingMemberResource::collection($people));
     }
 
+    public function updatePollingVolunteerByAssembly(Request $request){
+        $requestedData = (object)$request->json()->all();
+        $person= Person::find($requestedData->personId);
+        $person->person_name = $requestedData->personName;
+        $person->age = $requestedData->age;
+        $person->gender = $requestedData->gender;
+        $person->email= $requestedData->email;
+        $person->update();
+
+        $user = User::wherePersonId($person->id)->first();
+        $user->email = $requestedData->email;
+        $user->update();
+
+        $newPollingMember = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email','polling_stations.polling_number','people.district_id','people.polling_station_id')
+            ->join('users','users.person_id','people.id')
+            ->join('polling_stations','people.polling_station_id','polling_stations.id')
+            ->where('people.id',$person->id)->first();
+
+        return $this->successResponse(new PollingVolunteerResource($newPollingMember),'User added successfully');
+    }
+
     public  function createPollingVolunteerByAssembly(Request $request){
         DB::beginTransaction();
 

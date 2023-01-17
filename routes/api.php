@@ -100,6 +100,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
     Route::group(array('prefix' => 'pollingVolunteer'), function() {
         Route::post("/", [PersonController::class, 'createPollingVolunteerByAssembly']);
+        Route::post("/", [PersonController::class, 'updatePollingVolunteerByAssembly']);
         Route::get("/{id}", [PersonController::class, 'getPollingVolunteerByAssembly']);
         Route::get("/{pollingVolunteerId}/members", [PollingVolunteer::class, 'fetchGeneralWorkersByPollingVolunteerId']);
     });
