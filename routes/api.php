@@ -12,6 +12,7 @@ use App\Http\Controllers\LegislativeController;
 use App\Http\Controllers\PollingVolunteer;
 use App\Http\Controllers\AssemblyAdminDashboard;
 use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\DistrictListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,6 +97,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::post("/", [PersonController::class, 'createDistrictAdminByLegendVolunteer']);
         Route::put("/", [PersonController::class, 'updateDistrictAdminByLegendVolunteer']);
         Route::get("/{legendVolunteerId}", [PersonController::class, 'getDistrictAdminByLegendVolunteer']);
+        Route::get("/{districtAdminId}/members", [DistrictListController::class, 'fetchGeneralWorkersByDistrictAdminId']);
     });
 
     Route::group(array('prefix' => 'assemblyVolunteer'), function() {

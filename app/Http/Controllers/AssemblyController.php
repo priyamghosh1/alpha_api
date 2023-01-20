@@ -28,23 +28,29 @@ class AssemblyController extends ApiController
 
     public function fetchGeneralWorkersByAssemblyVolunteerId($assemblyVolunteerId){
         $return_array = [];
-        $boothVolunteer = [];
+//        $boothVolunteer = [];
         $pollingStationVolunteers = DB::select("select users.person_id, users.parent_id from people
             left join users on users.person_id = people.id
             where users.parent_id = $assemblyVolunteerId and people.person_type_id = 7");
 
-        foreach($pollingStationVolunteers as $pollingStationVolunteer){
-            $boothVolunteers = DB::select("select users.person_id, users.parent_id from people
-                left join users on users.person_id = people.id
-                where users.parent_id = $pollingStationVolunteer->person_id and people.person_type_id = 8");
-            $boothVolunteer = array_merge($boothVolunteer,$boothVolunteers);
+        $pollingVolunteerController = new PollingVolunteer();
+        foreach ($pollingStationVolunteers as $pollingStationVolunteer) {
+            $data = json_decode($pollingVolunteerController->fetchGeneralWorkersByPollingVolunteerId($pollingStationVolunteer->person_id)->content(),true)['data'] ;
+            $return_array = array_merge($return_array,$data);
         }
 
-        $personController = new PersonController();
-        foreach($boothVolunteer as $boothVol){
-            $response = json_decode($personController->fetchGeneralWorkersByBoothId($boothVol->person_id)->content(),true)['data'] ;
-            $return_array = array_merge($return_array,$response);
-        }
+//        foreach($pollingStationVolunteers as $pollingStationVolunteer){
+//            $boothVolunteers = DB::select("select users.person_id, users.parent_id from people
+//                left join users on users.person_id = people.id
+//                where users.parent_id = $pollingStationVolunteer->person_id and people.person_type_id = 8");
+//            $boothVolunteer = array_merge($boothVolunteer,$boothVolunteers);
+//        }
+//
+//        $personController = new PersonController();
+//        foreach($boothVolunteer as $boothVol){
+//            $response = json_decode($personController->fetchGeneralWorkersByBoothId($boothVol->person_id)->content(),true)['data'] ;
+//            $return_array = array_merge($return_array,$response);
+//        }
 
         return response()->json(['success'=>1,'data'=> $return_array], 200,[],JSON_NUMERIC_CHECK);
     }
