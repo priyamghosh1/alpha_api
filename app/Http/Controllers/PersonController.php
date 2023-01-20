@@ -7,6 +7,7 @@ use App\Http\Resources\AssemblyVolunteerResource;
 use App\Http\Resources\BoothVolunteerResource;
 use App\Http\Resources\DistrictAdminResource;
 use App\Http\Resources\GeneralWorkerResource;
+use App\Http\Resources\LegendVolunteerResource;
 use App\Http\Resources\PollingVolunteerResource;
 use App\Http\Resources\VolunteerResource;
 use App\Models\Person;
@@ -283,6 +284,20 @@ class PersonController extends ApiController
         return $this->successResponse(DistrictAdminResource::collection($people));
     }
 
+    public function getLegendVolunteerByLegislative($legislativeCandidate){
+        $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
+            parent_person.person_name as parent_name, users.email,
+            person_types.person_type_name, people.age, people.gender from users
+
+            inner join people ON people.id = users.person_id
+            left join users as parent_user on parent_user.id = users.parent_id
+            left join people as parent_person on  parent_user.id=parent_person.id
+            inner join person_types ON person_types.id = people.person_type_id
+            where people.person_type_id=4 and users.parent_id = $legislativeCandidate");
+
+        return $this->successResponse(LegendVolunteerResource::collection($people));
+    }
+
     public function getAssemblyVolunteerByDistrictAdmin($id){
         $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
             parent_person.person_name as parent_name, users.email,assemblies.id as assembly_constituency_id,
@@ -345,11 +360,88 @@ class PersonController extends ApiController
         return $this->successResponse(new DistrictAdminResource($districtVolunteer), 'User added successfully');
     }
 
+    public function updateLegendVolunteerByLegislative(Request $request){
+        $requestedData = (object)$request->json()->all();
+        $person= Person::find($requestedData->personId);
+        $person->person_name = strtoupper($requestedData->personName);
+        $person->age = $requestedData->age;
+        $person->gender = $requestedData->gender;
+        $person->email= strtoupper($requestedData->email);
+        $person->update();
+
+        $user = User::wherePersonId($person->id)->first();
+        $user->email = strtoupper($requestedData->email);
+        $user->update();
+
+        $legendVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark',
+            'users.email')
+            ->join('users','users.person_id','people.id')
+            ->where('people.id',$person->id)->first();
+        return $this->successResponse(new LegendVolunteerResource($legendVolunteer), 'User added successfully');
+    }
+
+    public function createLegendVolunteerByLegislative(Request $request){
+        DB::beginTransaction();
+        try{
+            $now = Carbon::now();
+            $currentYear = $now->year;
+
+            $voucher="LegendVolunteer";
+            $customVoucher=CustomVoucher::where('voucher_name','=',$voucher)->first();
+            if($customVoucher) {
+                //already exist
+                $customVoucher->last_counter = $customVoucher->last_counter + 1;
+                $customVoucher->save();
+            }else{
+                //fresh entry
+                $customVoucher= new CustomVoucher();
+                $customVoucher->voucher_name=$voucher;
+                $customVoucher->accounting_year= $currentYear;
+                $customVoucher->last_counter=1;
+                $customVoucher->delimiter='-';
+                $customVoucher->prefix='PA';
+                $customVoucher->save();
+            }
+            //adding Zeros before number
+            $counter = str_pad($customVoucher->last_counter,3,"0",STR_PAD_LEFT);
+
+            $member_code = 'legend' . $customVoucher->last_counter;
+
+            $person= new Person();
+            $person->member_code = $member_code;
+            $person->person_type_id = $request['personTypeId'];
+            $person->person_name = strtoupper($request['personName']);
+            $person->age = $request['age'];
+            $person->gender = $request['gender'];
+            $person->email= strtoupper($request['email']);
+            $person->state_id = 17;
+            $person->save();
+
+            $user = new User();
+            $user->person_id = $person->id;
+            $user->parent_id = $request['parentId'];
+            $user->remark = strtoupper($request['remark']);
+            $user->email = strtoupper($request['email']);
+            $user->password = $request['password'];
+            $user->save();
+            DB::commit();
+
+        }catch(\Exception $e){
+            DB::rollBack();
+            return response()->json(['success'=>0,'exception'=>$e->getMessage()], 500);
+        }
+        $legendVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark','people.cast',
+            'users.email')
+            ->join('users','users.person_id','people.id')
+            ->where('people.id',$person->id)->first();
+        return $this->successResponse(new LegendVolunteerResource($legendVolunteer), 'User added successfully');
+    }
+
     public function createDistrictAdminByLegendVolunteer(Request $request){
 
-        // return (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
         DB::beginTransaction();
-
         try{
             $now = Carbon::now();
             $currentYear = $now->year;
@@ -373,15 +465,7 @@ class PersonController extends ApiController
             //adding Zeros before number
             $counter = str_pad($customVoucher->last_counter,3,"0",STR_PAD_LEFT);
 
-//             $assemblyDetails = PollingStation::
-//             select(DB::raw('SUBSTRING(assemblies.assembly_name, 1, 3) AS assembly_code'))
-//                 ->join('assemblies','assemblies.id','polling_stations.assembly_constituency_id')
-// //                ->where('polling_stations.id',$request->input('pollingStationId'))
-//                 ->where('polling_stations.id',(Person::select('polling_station_id')->whereId(($request->user())->id)->first())->polling_station_id)
-//                 ->first();
-//            $member_code = $assemblyDetails->assembly_code . $customVoucher->last_counter;
             $member_code = 'district' . $customVoucher->last_counter;
-//            $emailId = 'vol'.$customVoucher->last_counter;
 
             $person= new Person();
             $person->member_code = $member_code;
@@ -390,12 +474,8 @@ class PersonController extends ApiController
             $person->age = $request['age'];
             $person->gender = $request['gender'];
             $person->email= strtoupper($request['email']);
-//            $person->polling_station_id= $request['pollingStationId'];
-//            $person->district_id= (Person::select('district_id')->whereId(($request->user())->id)->first())->district_id;
             $person->district_id= $request['districtId'];
             $person->state_id = 17;
-//            $person->assembly_constituency_id= (Person::select('assembly_constituency_id')->whereId(($request->user())->id)->first())->assembly_constituency_id;
-            $person->assembly_constituency_id= $request['assemblyConstituencyId'];
             $person->save();
 
             $user = new User();
@@ -405,7 +485,6 @@ class PersonController extends ApiController
             $user->email = strtoupper($request['email']);
             $user->password = $request['password'];
             $user->save();
-
             DB::commit();
 
         }catch(\Exception $e){
@@ -416,10 +495,7 @@ class PersonController extends ApiController
             'users.id','users.person_id','users.remark','people.cast',
             'users.email','people.district_id','people.polling_station_id')
             ->join('users','users.person_id','people.id')
-//            ->join('assemblies','assemblies.id','people.assembly_constituency_id')
-            // ->join('polling_stations','people.polling_station_id','polling_stations.id')
             ->where('people.id',$person->id)->first();
-        // return $assemblyVolunteer;
         return $this->successResponse(new DistrictAdminResource($districtVolunteer), 'User added successfully');
     }
 
@@ -707,7 +783,7 @@ class PersonController extends ApiController
         return $this->successResponse(new VolunteerResource($newPollingMember),'User added successfully');
     }
 
-    public function getVolunteerByPolingMember($id){
+    public function getVolunteerByBoothVolunteer($id){
 //        $people = DB::Select(DB::raw("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
 //            parent_person.person_name as parent_name, users.remark, users.email,people.part_no,people.preferable_candidate,people.road_name,
 //            person_types.person_type_name, people.age, people.gender,people.cast,people.post_office,people.suggestion,people.aadhar_id,people.polling_station_id,
