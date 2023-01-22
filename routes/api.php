@@ -90,6 +90,9 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
     Route::group(array('prefix' => 'legislativeCandidate'), function() {
         Route::post("/", [LegislativeController::class, 'createLegislativeCandidateByAdmin']);
+        Route::put("/", [LegislativeController::class, 'updateLegislativeCandidateByAdmin']);
+        Route::get("/{legislativeCandidateId}/members", [LegislativeController::class, 'fetchGeneralWorkersByLegislativeCandidate']);
+        Route::get("/{adminId}", [LegislativeController::class, 'getLegislativeByAdmin']);
     });
 
     Route::group(array('prefix' => 'legendVolunteer'), function() {

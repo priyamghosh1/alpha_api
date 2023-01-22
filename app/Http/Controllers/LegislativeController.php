@@ -16,6 +16,36 @@ use Illuminate\Support\Facades\DB;
 
 class LegislativeController extends ApiController
 {
+    public function getLegislativeByAdmin($adminId){
+        $people = DB::select("select users.id, users.person_id, users.parent_id,people.member_code, people.person_name,
+            parent_person.person_name as parent_name, users.email,
+            person_types.person_type_name, people.age, people.gender from users
+
+            inner join people ON people.id = users.person_id
+            left join users as parent_user on parent_user.id = users.parent_id
+            left join people as parent_person on  parent_user.id=parent_person.id
+            inner join person_types ON person_types.id = people.person_type_id
+            where people.person_type_id=4 and users.parent_id = $adminId");
+
+        return $this->successResponse(LegislativeCandidateResource::collection($people));
+    }
+
+    public function fetchGeneralWorkersByLegislativeCandidate($legislativeCandidateId)
+    {
+        $return_array = [];
+        $legislativeCandidates = DB::select("select users.person_id, users.parent_id from people
+            left join users on users.person_id = people.id
+            where users.parent_id = $legislativeCandidateId and people.person_type_id = 4");
+
+        $districtController = new DistrictListController();
+        foreach ($legislativeCandidates as $legislativeCandidate){
+            $data = json_decode($districtController->fetchGeneralWorkersByDistrictAdminId($legislativeCandidate->person_id)->content(),true)['data'] ;
+            $return_array = array_merge($return_array,$data);
+        }
+
+        return $return_array;
+    }
+
     public function createLegislativeCandidateByAdmin(Request $request)
     {
         DB::beginTransaction();
@@ -73,6 +103,27 @@ class LegislativeController extends ApiController
             ->join('users','users.person_id','people.id')
             ->where('people.id',$person->id)->first();
         return $this->successResponse(new LegislativeCandidateResource($legislativeCandidate), 'User added successfully');
+    }
+
+    public function updateLegislativeCandidateByAdmin(Request $request){
+        $requestedData = (object)$request->json()->all();
+        $person= Person::find($requestedData->personId);
+        $person->person_name = strtoupper($requestedData->personName);
+        $person->age = $requestedData->age;
+        $person->gender = $requestedData->gender;
+        $person->email= strtoupper($requestedData->email);
+        $person->update();
+
+        $user = User::wherePersonId($person->id)->first();
+        $user->email = strtoupper($requestedData->email);
+        $user->update();
+
+        $legendVolunteer = Person::select('people.member_code','people.age', 'people.gender','people.person_name',
+            'users.id','users.person_id','users.remark',
+            'users.email')
+            ->join('users','users.person_id','people.id')
+            ->where('people.id',$person->id)->first();
+        return $this->successResponse(new LegislativeCandidateResource($legendVolunteer), 'User added successfully');
     }
 
     public function create()
