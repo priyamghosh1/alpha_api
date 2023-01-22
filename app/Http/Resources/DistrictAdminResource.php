@@ -24,7 +24,8 @@ class DistrictAdminResource extends JsonResource
             "email" => $this->email,
             "age" => $this->age,
             "gender" => $this->gender,
-            "districtId" => $this->district_id
+            "districtId" => $this->district_id,
+            // "districtName" => $this->district_name
         ];
     }
 }

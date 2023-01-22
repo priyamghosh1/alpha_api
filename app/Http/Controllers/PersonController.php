@@ -340,12 +340,15 @@ class PersonController extends ApiController
 
     public function updateDistrictAdminByLegendVolunteer(Request $request){
         $requestedData = (object)$request->json()->all();
+       
+       
         $person= Person::find($requestedData->personId);
         $person->person_name = strtoupper($requestedData->personName);
         $person->age = $requestedData->age;
         $person->gender = $requestedData->gender;
         $person->email= strtoupper($requestedData->email);
         $person->district_id= $requestedData->districtId;
+        
         $person->update();
 
         $user = User::wherePersonId($person->id)->first();
@@ -440,6 +443,9 @@ class PersonController extends ApiController
 //    }
 
     public function createDistrictAdminByLegendVolunteer(Request $request){
+
+        // return $request['parentId'];
+        // return response()->json(['success'=>0,'exception'=>$request['parentId']], 500);
 
         DB::beginTransaction();
         try{
