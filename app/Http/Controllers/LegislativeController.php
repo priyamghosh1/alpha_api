@@ -33,13 +33,13 @@ class LegislativeController extends ApiController
     public function fetchGeneralWorkersByLegislativeCandidate($legislativeCandidateId)
     {
         $return_array = [];
-        $legislativeCandidates = DB::select("select users.person_id, users.parent_id from people
+        $legendVolunteers = DB::select("select users.person_id, users.parent_id from people
             left join users on users.person_id = people.id
             where users.parent_id = $legislativeCandidateId and people.person_type_id = 4");
 
         $districtController = new DistrictListController();
-        foreach ($legislativeCandidates as $legislativeCandidate){
-            $data = json_decode($districtController->fetchGeneralWorkersByDistrictAdminId($legislativeCandidate->person_id)->content(),true)['data'] ;
+        foreach ($legendVolunteers as $legendVolunteer){
+            $data = json_decode($districtController->fetchGeneralWorkersByDistrictAdminId($legendVolunteer->person_id)->content(),true)['data'] ;
             $return_array = array_merge($return_array,$data);
         }
 

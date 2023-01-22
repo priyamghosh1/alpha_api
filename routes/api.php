@@ -88,6 +88,12 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
     });
 
+
+
+    Route::group(array('prefix' => 'admin'), function() {
+        Route::get("/{adminId}/members", [LegislativeController::class, 'fetchGeneralWorkersByLegislativeCandidate']);
+    });
+
     Route::group(array('prefix' => 'legislativeCandidate'), function() {
         Route::post("/", [LegislativeController::class, 'createLegislativeCandidateByAdmin']);
         Route::put("/", [LegislativeController::class, 'updateLegislativeCandidateByAdmin']);
