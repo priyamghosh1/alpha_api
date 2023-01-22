@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends ApiController
 {
-    public function fetchGeneralWorkersByLegislativeCandidate($legislativeCandidateId)
+    public function fetchGeneralWorkersByAdmin($legislativeCandidateId)
     {
         $return_array = [];
         $legislativeCandidates = DB::select("select users.person_id, users.parent_id from people

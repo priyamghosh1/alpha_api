@@ -14,6 +14,7 @@ use App\Http\Controllers\AssemblyAdminDashboard;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\DistrictListController;
 use App\Http\Controllers\LegendController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,7 +92,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 
 
     Route::group(array('prefix' => 'admin'), function() {
-        Route::get("/{adminId}/members", [LegislativeController::class, 'fetchGeneralWorkersByLegislativeCandidate']);
+        Route::get("/{adminId}/members", [AdminController::class, 'fetchGeneralWorkersByAdmin']);
     });
 
     Route::group(array('prefix' => 'legislativeCandidate'), function() {
