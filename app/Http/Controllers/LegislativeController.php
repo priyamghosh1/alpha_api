@@ -43,7 +43,8 @@ class LegislativeController extends ApiController
             $return_array = array_merge($return_array,$data);
         }
 
-        return $return_array;
+//        return $return_array;
+        return response()->json(['success'=>1,'data'=> $return_array], 200,[],JSON_NUMERIC_CHECK);
     }
 
     public function createLegislativeCandidateByAdmin(Request $request)
